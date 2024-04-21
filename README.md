@@ -8,14 +8,19 @@ The RIAA is based on a two-stage RIAA using the [LM833](https://www.ti.com/lit/d
 
 ![alt text](./images/screenshot.png)
 
+## Requirements
+
+- Two-stage gain.
+- Low noise.
+- Plug'n'Play / Drop-in replacement.
+- ...
+
 ## Roadmap
 
 - Finish the schematics for the prototype.
-
 - Finish the PCB design for the prototype.
-
-- Test the RIAA with adequate equipment.
-
+-Test the RIAA with adequate equipment.
+- ...
 
 
 ## Contributing
