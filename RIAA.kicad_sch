@@ -3070,7 +3070,7 @@
 	)
 	(wire
 		(pts
-			(xy 326.39 176.53) (xy 326.39 193.04)
+			(xy 326.39 168.91) (xy 326.39 193.04)
 		)
 		(stroke
 			(width 0)
@@ -5366,7 +5366,7 @@
 			)
 		)
 	)
-	(global_label "GND PSU"
+	(global_label "GND MB"
 		(shape input)
 		(at 173.99 162.56 270)
 		(fields_autoplaced yes)
@@ -5378,7 +5378,7 @@
 		)
 		(uuid "0b76ab24-09e6-4132-bedd-c2626bd6c9c8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.99 174.1933 90)
+			(at 173.99 173.1047 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5410,7 +5410,7 @@
 			)
 		)
 	)
-	(global_label "GND LF"
+	(global_label "GND"
 		(shape input)
 		(at 241.3 208.28 270)
 		(fields_autoplaced yes)
@@ -5422,7 +5422,7 @@
 		)
 		(uuid "27afb21a-24bf-461d-ae36-4313527c3357")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 241.3 218.22 90)
+			(at 241.3 215.1357 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5456,7 +5456,7 @@
 	)
 	(global_label "21V"
 		(shape input)
-		(at 326.39 176.53 90)
+		(at 326.39 168.91 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5466,7 +5466,7 @@
 		)
 		(uuid "4d9387de-dfae-4c2c-8457-be3825ce7b0c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 326.39 170.0372 90)
+			(at 326.39 162.4172 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5498,7 +5498,7 @@
 			)
 		)
 	)
-	(global_label "31V"
+	(global_label "30V"
 		(shape input)
 		(at 34.29 149.86 180)
 		(fields_autoplaced yes)
@@ -5564,7 +5564,7 @@
 			)
 		)
 	)
-	(global_label "GND LF"
+	(global_label "GND"
 		(shape input)
 		(at 231.14 208.28 270)
 		(fields_autoplaced yes)
@@ -5576,7 +5576,7 @@
 		)
 		(uuid "7b59d58a-9556-4f18-be93-dea194858c53")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 231.14 218.22 90)
+			(at 231.14 215.1357 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5630,7 +5630,7 @@
 			)
 		)
 	)
-	(global_label "GND LF"
+	(global_label "GND"
 		(shape input)
 		(at 243.84 185.42 90)
 		(fields_autoplaced yes)
@@ -5642,7 +5642,7 @@
 		)
 		(uuid "8acc6ce8-e019-4d0c-867e-7429d17a977a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 243.84 175.48 90)
+			(at 243.84 178.5643 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5696,7 +5696,7 @@
 			)
 		)
 	)
-	(global_label "GND LF"
+	(global_label "GND"
 		(shape input)
 		(at 233.68 185.42 90)
 		(fields_autoplaced yes)
@@ -5708,7 +5708,7 @@
 		)
 		(uuid "a26fb094-b17c-4121-89ae-6501f5d3930c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 233.68 175.48 90)
+			(at 233.68 178.5643 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5916,7 +5916,7 @@
 			)
 		)
 	)
-	(global_label "GND PSU"
+	(global_label "GND MB"
 		(shape input)
 		(at 34.29 195.58 180)
 		(fields_autoplaced yes)
@@ -5928,7 +5928,7 @@
 		)
 		(uuid "cc8d8d60-a7a9-49b5-81e5-00d2e76e1d31")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.6567 195.58 0)
+			(at 23.7453 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5938,7 +5938,7 @@
 			)
 		)
 	)
-	(global_label "GND PSU"
+	(global_label "GND MB"
 		(shape input)
 		(at 312.42 190.5 90)
 		(fields_autoplaced yes)
@@ -5950,7 +5950,7 @@
 		)
 		(uuid "cea807ec-b722-47cb-96c0-0c5a5d58336a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 312.42 178.8667 90)
+			(at 312.42 179.9553 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6026,7 +6026,7 @@
 			)
 		)
 	)
-	(global_label "GND LF"
+	(global_label "GND"
 		(shape input)
 		(at 365.76 172.72 90)
 		(fields_autoplaced yes)
@@ -6038,7 +6038,7 @@
 		)
 		(uuid "e75c9018-14ae-4f0e-9bd1-421cef36adca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 365.76 162.78 90)
+			(at 365.76 165.8643 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6114,7 +6114,7 @@
 			)
 		)
 	)
-	(global_label "31V"
+	(global_label "30V"
 		(shape input)
 		(at 328.93 190.5 90)
 		(fields_autoplaced yes)
