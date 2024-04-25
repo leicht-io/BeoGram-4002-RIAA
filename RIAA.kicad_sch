@@ -5289,7 +5289,7 @@
 		)
 		(uuid "fa007d35-e7d9-438d-b2e2-36315cd7a8b4")
 	)
-	(text "Relay Notes\n- G6K P1 to D2 cathode\n- G6K P2 to P8-6 (R OUT RIAA) & P9-3 (R OUT)\n- G6K P3 to P9-5 (GND LF)\n- G6K P4 to P9-5 (GND LF)\n- G6K P5 to P9-5 (GND LF)\n- G6K P6 to P9-5 (GND LF)\n- G6K P7 to P8-4 (L OUT RUAA) & P9-1 (L OUT)\n- G6K P8 to D2 anode\n\n"
+	(text "Relay Notes\n- G6K P1 to D2 cathode\n- G6K P2 to P8-6 (R OUT RIAA) & P9-3 (R OUT)\n- G6K P3 to P9-5 (GND)\n- G6K P4 to P9-5 (GND)\n- G6K P5 to P9-5 (GND)\n- G6K P6 to P9-5 (GND)\n- G6K P7 to P8-4 (L OUT RIAA) & P9-1 (L OUT)\n- G6K P8 to D2 anode\n\n"
 		(exclude_from_sim no)
 		(at 238.252 139.192 0)
 		(effects

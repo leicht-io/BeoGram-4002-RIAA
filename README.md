@@ -6,7 +6,7 @@ The project is, for now, a prototype in progress since I need to gain knowledge 
 
 The RIAA is based on a two-stage RIAA using the [LM833](https://www.ti.com/lit/ds/symlink/lm833.pdf?ts=1713462514880) which should greatly improve the performance over a singleamplifier design.
 
-![alt text](./images/screenshot_new.png)
+![alt text](./images/img.png)
 
 ## Requirements
 
