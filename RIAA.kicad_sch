@@ -8108,7 +8108,7 @@
 	(symbol
 		(lib_id "Device:D_Zener")
 		(at 101.6 134.62 0)
-		(mirror y)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8116,7 +8116,7 @@
 		(dnp no)
 		(uuid "a102f17b-cdba-4613-b207-51896bdbe555")
 		(property "Reference" "D1"
-			(at 101.092 137.668 0)
+			(at 102.108 131.572 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8124,7 +8124,7 @@
 			)
 		)
 		(property "Value" "1N4002"
-			(at 101.6 131.318 0)
+			(at 101.6 137.922 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9067,16 +9067,16 @@
 			)
 		)
 		(pin "8"
-			(uuid "3e2bec3b-cb6d-4e2e-82a1-1e31ab75a96e")
+			(uuid "3e2bec3b-cb6d-4e2e-82a1-1e31ab75a96f")
 		)
 		(pin "6"
 			(uuid "8b9473da-1715-47ce-a5df-bb5032ba4029")
 		)
 		(pin "4"
-			(uuid "1126f0c0-d4f0-492f-ba16-494a986e3bcd")
+			(uuid "1126f0c0-d4f0-492f-ba16-494a986e3bce")
 		)
 		(pin "3"
-			(uuid "ad9dcd63-b271-416e-9d0f-b0d5baafe2eb")
+			(uuid "ad9dcd63-b271-416e-9d0f-b0d5baafe2ec")
 		)
 		(pin "7"
 			(uuid "a9d47043-dd2e-4553-8058-ccfd4466f3f5")
@@ -9085,10 +9085,10 @@
 			(uuid "99e3f9a6-a449-4610-9214-ed9a799b3edb")
 		)
 		(pin "2"
-			(uuid "bcea7892-8c04-47b1-b342-8a3e81a4ce8d")
+			(uuid "bcea7892-8c04-47b1-b342-8a3e81a4ce8e")
 		)
 		(pin "1"
-			(uuid "55fb81e7-48d8-4f19-868d-2415f7765842")
+			(uuid "55fb81e7-48d8-4f19-868d-2415f7765843")
 		)
 		(instances
 			(project "RIAA"
