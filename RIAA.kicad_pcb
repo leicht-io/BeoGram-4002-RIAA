@@ -25842,6 +25842,18 @@
 		(layer "Edge.Cuts")
 		(uuid "43a2d21e-8745-48ce-9bc6-17e71647d216")
 	)
+	(gr_circle
+		(center 203.525 110.348)
+		(end 206.525 110.348)
+		(locked yes)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill none)
+		(layer "Edge.Cuts")
+		(uuid "4efe794f-8b55-4920-967e-1b06b11d7c83")
+	)
 	(gr_line
 		(start 162.4076 229.3432)
 		(end 162.4076 217.3432)
