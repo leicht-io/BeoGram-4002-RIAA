@@ -1,27 +1,24 @@
-# RIAA Schematics for Beogram 4002
+# RIAA Schematics for BeoGram 4002
 
-This repository contains a KiCad project for an open-source RIAA equalization circuit to be used in the Beogram 4002 turntable.
+This repository hosts a KiCad project for an open-source RIAA equalization circuit designed for use with the BeoGram 4002 turntable.
 
-The project is, for now, a prototype in progress since I need to gain knowledge about audio circuits and operational amplifiers while developing it.
+Currently, the project is a work in progress, serving as a prototype while I expand my understanding of audio circuits and operational amplifiers during development.
 
-The RIAA is based on a two-stage RIAA using the [LM833](https://www.ti.com/lit/ds/symlink/lm833.pdf?ts=1713462514880) which should greatly improve the performance over a singleamplifier design.
+The design features a single-stage RIAA equalization circuit based on the OPA2134.
 
 ![alt text](./images/img.png)
 
 ## Requirements
 
-- Two-stage gain.
 - Low noise.
 - Plug'n'Play / Drop-in replacement.
-- ...
+- TBC.
 
 ## Roadmap
 
 - Finish the schematics for the prototype.
 - Finish the PCB design for the prototype.
 -Test the RIAA with adequate equipment.
-- ...
-
 
 ## Contributing
 
