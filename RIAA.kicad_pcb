@@ -5603,7 +5603,7 @@
 				)
 			)
 		)
-		(property "Value" "4370"
+		(property "Value" "5k6"
 			(at 3.81 1.92 0)
 			(layer "F.Fab")
 			(uuid "f0d5fc0c-0f89-4e4e-94f3-9cb9054d92e9")
@@ -20346,7 +20346,7 @@
 				)
 			)
 		)
-		(property "Value" "240"
+		(property "Value" "300"
 			(at 3.81 1.92 0)
 			(layer "F.Fab")
 			(uuid "29e2830b-dd75-4216-ad57-78ba203ac312")

@@ -6517,7 +6517,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4370"
+		(property "Value" "5k6"
 			(at 102.87 162.5599 0)
 			(effects
 				(font
@@ -6795,7 +6795,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "240"
+		(property "Value" "300"
 			(at 119.38 152.3999 0)
 			(effects
 				(font
