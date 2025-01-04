@@ -8121,7 +8121,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_Zener")
-		(at 101.6 134.62 180)
+		(at 101.6 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8129,7 +8129,7 @@
 		(dnp no)
 		(uuid "a102f17b-cdba-4613-b207-51896bdbe555")
 		(property "Reference" "D1"
-			(at 101.092 131.572 0)
+			(at 102.108 137.668 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8137,7 +8137,7 @@
 			)
 		)
 		(property "Value" "1N4002"
-			(at 101.6 137.922 0)
+			(at 101.6 131.318 0)
 			(effects
 				(font
 					(size 1.27 1.27)
