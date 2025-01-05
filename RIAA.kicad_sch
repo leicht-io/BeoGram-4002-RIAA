@@ -4040,16 +4040,6 @@
 	)
 	(wire
 		(pts
-			(xy 264.16 157.48) (xy 264.16 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69972abe-bb9a-4432-82f2-257c8f4d58da")
-	)
-	(wire
-		(pts
 			(xy 146.05 91.44) (xy 146.05 92.71)
 		)
 		(stroke
@@ -4057,16 +4047,6 @@
 			(type default)
 		)
 		(uuid "6a811f9f-8abd-400d-b086-0ed3c743cf9a")
-	)
-	(wire
-		(pts
-			(xy 254 157.48) (xy 254 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b5f81d8-a47e-49a4-882a-79afa2760aa3")
 	)
 	(wire
 		(pts
@@ -5647,28 +5627,6 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 264.16 157.48 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8acc6ce8-e019-4d0c-867e-7429d17a977a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 264.16 150.6243 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
 		(at 162.56 166.37 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5746,28 +5704,6 @@
 		(uuid "9e92b6f0-8402-43f0-82d9-14a01da7e520")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 379.73 119.6605 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 254 157.48 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a26fb094-b17c-4121-89ae-6501f5d3930c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 254 150.6243 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6304,7 +6240,7 @@
 				)
 			)
 		)
-		(property "Value" "Fra Hovedprint"
+		(property "Value" "From main PCB"
 			(at 354.584 170.18 90)
 			(effects
 				(font
@@ -7287,7 +7223,7 @@
 				)
 			)
 		)
-		(property "Value" "Fra Ledning"
+		(property "Value" "From Wire"
 			(at 364.236 152.146 90)
 			(effects
 				(font
