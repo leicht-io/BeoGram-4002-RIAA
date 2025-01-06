@@ -4,21 +4,11 @@ This repository hosts a KiCad project for an open-source RIAA equalization circu
 
 Currently, the project is a work in progress, serving as a prototype while I expand my understanding of audio circuits and operational amplifiers during development.
 
-The design features a single-stage RIAA equalization circuit based on the OPA2134.
+The design features a dual-stage RIAA equalization circuit based on the LM833 but with the OPA2134.
 
 ![alt text](./images/img.png)
 
-## Requirements
-
-- Low noise.
-- Plug'n'Play / Drop-in replacement.
-- TBC.
-
-## Roadmap
-
-- Finish the schematics for the prototype.
-- Finish the PCB design for the prototype.
--Test the RIAA with adequate equipment.
+![alt text](./images/RIAA.png)
 
 ## Contributing
 
