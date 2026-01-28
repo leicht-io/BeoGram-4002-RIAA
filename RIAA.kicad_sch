@@ -2394,34 +2394,34 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Simulation_SPICE:NPN"
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Transistor_BJT:Q_NPN_BCE"
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "Q"
-				(at -2.54 7.62 0)
+				(at 5.08 1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "NPN"
-				(at -2.54 5.08 0)
+			(property "Value" "Q_NPN_BCE"
+				(at 5.08 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 63.5 0 0)
+				(at 5.08 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2429,8 +2429,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
-				(at 63.5 0 0)
+			(property "Datasheet" "~"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2438,7 +2438,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
+			(property "Description" "NPN transistor, base/collector/emitter"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2456,7 +2456,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Type" "GUMMELPOON"
+			(property "Sim.Pins" "1=B 2=C 3=E"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2465,7 +2465,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=C 2=B 3=E"
+			(property "ki_keywords" "BJT"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2474,22 +2474,13 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "simulation"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NPN_0_1"
+			(symbol "Q_NPN_BCE_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
 					)
 					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -2498,34 +2489,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+						(xy 0.635 1.905) (xy 0.635 -1.905)
 					)
 					(stroke
 						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -2543,9 +2510,35 @@
 						(type none)
 					)
 				)
+			)
+			(symbol "Q_NPN_BCE_1_1"
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
 					)
 					(stroke
 						(width 0)
@@ -2555,54 +2548,10 @@
 						(type outline)
 					)
 				)
-				(polyline
-					(pts
-						(xy 2.794 -1.27) (xy 2.794 -1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 -1.27) (xy 2.794 -1.27)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "NPN_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
 					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2617,7 +2566,25 @@
 						)
 					)
 				)
-				(pin open_emitter line
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 2.54 -5.08 90)
 					(length 2.54)
 					(name "E"
@@ -3646,6 +3613,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 140.97) (xy 224.79 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f101623-92b1-44ac-85a2-30fbb187b39e")
+	)
+	(wire
+		(pts
 			(xy 247.65 140.97) (xy 247.65 149.86)
 		)
 		(stroke
@@ -3883,16 +3860,6 @@
 			(type default)
 		)
 		(uuid "50056e00-0ac7-463f-a9f6-8e87403c6768")
-	)
-	(wire
-		(pts
-			(xy 224.79 157.48) (xy 224.79 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5089a7c4-fa65-4d39-a9ed-1374ada9697e")
 	)
 	(wire
 		(pts
@@ -4256,16 +4223,6 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 140.97) (xy 247.65 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "733f8ef0-7f99-4291-85db-7608c32a0d3a")
-	)
-	(wire
-		(pts
 			(xy 292.1 92.71) (xy 294.64 92.71)
 		)
 		(stroke
@@ -4433,6 +4390,16 @@
 			(type default)
 		)
 		(uuid "809055c9-80c1-4362-b278-18f9e300dca0")
+	)
+	(wire
+		(pts
+			(xy 224.79 140.97) (xy 224.79 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81dba478-0892-4e36-9b4e-1dbec9b5cb1a")
 	)
 	(wire
 		(pts
@@ -6627,7 +6594,7 @@
 		(at 116.84 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6694,7 +6661,7 @@
 		(at 161.29 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "08f57e0e-4e3b-46b4-9e35-cd27f347f6e2")
@@ -6860,7 +6827,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "12806b1b-3f36-4506-99fe-7d9d2ba43acf")
@@ -6997,7 +6964,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C706409"
+		(property "LCSC PN" "C706409"
 			(at 372.11 101.6 0)
 			(effects
 				(font
@@ -7075,7 +7042,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 181.61 88.9 0)
 			(effects
 				(font
@@ -7104,7 +7071,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "13fb879d-e8a9-437d-a381-08a1f2a49354")
@@ -7239,7 +7206,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C2092472"
+		(property "LCSC PN" "C2092472"
 			(at 124.46 92.71 90)
 			(effects
 				(font
@@ -7383,7 +7350,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 363.22 77.47 0)
 			(effects
 				(font
@@ -7459,7 +7426,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C433394"
+		(property "LCSC PN" "C433394"
 			(at 243.84 149.86 0)
 			(effects
 				(font
@@ -7603,7 +7570,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5260729"
+		(property "LCSC PN" "C5260729"
 			(at 372.11 109.22 0)
 			(effects
 				(font
@@ -7681,7 +7648,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870816"
+		(property "LCSC PN" "C870816"
 			(at 77.47 175.26 0)
 			(effects
 				(font
@@ -7823,7 +7790,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C88007"
+		(property "LCSC PN" "C88007"
 			(at 77.47 160.02 0)
 			(effects
 				(font
@@ -7901,7 +7868,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870623"
+		(property "LCSC PN" "C870623"
 			(at 140.97 82.55 90)
 			(effects
 				(font
@@ -7978,7 +7945,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C134838"
+		(property "LCSC PN" "C134524"
 			(at 115.57 171.45 0)
 			(effects
 				(font
@@ -8054,7 +8021,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5260729"
+		(property "LCSC PN" "C5260729"
 			(at 87.63 80.01 90)
 			(effects
 				(font
@@ -8130,7 +8097,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C87361"
+		(property "LCSC PN" "C87361"
 			(at 303.53 82.55 0)
 			(effects
 				(font
@@ -8176,7 +8143,7 @@
 		(at 167.64 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "2f892104-db1c-4170-85d7-e5cdd3ffde3b")
@@ -8295,7 +8262,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870638"
+		(property "LCSC PN" "C870638"
 			(at 93.98 165.1 0)
 			(effects
 				(font
@@ -8389,7 +8356,7 @@
 		(at 262.89 86.36 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "3292cfdb-b663-4ef7-a5f9-2d285f7a61d6")
@@ -8507,7 +8474,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C24497"
+		(property "LCSC PN" "C24497"
 			(at 25.4 81.28 90)
 			(effects
 				(font
@@ -8582,7 +8549,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870898"
+		(property "LCSC PN" "C870898"
 			(at 298.45 92.71 90)
 			(effects
 				(font
@@ -8658,7 +8625,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C4410"
+		(property "LCSC PN" "C4410"
 			(at 243.84 138.43 90)
 			(effects
 				(font
@@ -8733,7 +8700,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C17900"
+		(property "LCSC PN" "C17900"
 			(at 243.84 158.75 90)
 			(effects
 				(font
@@ -8877,13 +8844,12 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C87361"
+		(property "LCSC PN" "C87361"
 			(at 40.64 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -9040,13 +9006,12 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C87361"
+		(property "LCSC PN" "C87361"
 			(at 24.13 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "8"
@@ -9135,7 +9100,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C87361"
+		(property "LCSC PN" "C87361"
 			(at 383.54 85.09 0)
 			(effects
 				(font
@@ -9246,7 +9211,7 @@
 		(at 292.1 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "550f1a6a-6811-4f6b-bf8c-c31c39c84467")
@@ -9315,7 +9280,7 @@
 		(at 80.01 86.36 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "55c88cc4-ca81-4862-98a7-26cd458b4aa1")
@@ -9450,7 +9415,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "5831a42b-d608-4f6a-9c74-e3bb7e9fa092")
@@ -9577,7 +9542,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C433393"
+		(property "LCSC PN" "C433393"
 			(at 104.14 165.1 90)
 			(effects
 				(font
@@ -9654,7 +9619,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C706409"
+		(property "LCSC PN" "C706409"
 			(at 190.5 101.6 0)
 			(effects
 				(font
@@ -9732,7 +9697,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 363.22 88.9 0)
 			(effects
 				(font
@@ -9826,7 +9791,7 @@
 		(at 350.52 88.9 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "66021180-3c57-49dc-a4cb-0a7f45ccfa61")
@@ -10011,7 +9976,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 181.61 77.47 0)
 			(effects
 				(font
@@ -10151,7 +10116,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870898"
+		(property "LCSC PN" "C870898"
 			(at 110.49 92.71 90)
 			(effects
 				(font
@@ -10226,7 +10191,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5260729"
+		(property "LCSC PN" "C5260729"
 			(at 396.24 85.09 90)
 			(effects
 				(font
@@ -10304,7 +10269,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 281.94 74.93 0)
 			(effects
 				(font
@@ -10447,7 +10412,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870792"
+		(property "LCSC PN" "C870792"
 			(at 154.94 88.9 0)
 			(effects
 				(font
@@ -10489,7 +10454,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "100nF"
 			(at 67.31 170.9038 0)
 			(effects
 				(font
@@ -10525,7 +10490,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C24497"
+		(property "LCSC PN" "C24497"
 			(at 64.77 170.18 0)
 			(effects
 				(font
@@ -10553,7 +10518,7 @@
 		(at 344.17 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "884bdee0-2b90-4ee1-b0f9-b6f15f762645")
@@ -10672,7 +10637,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C13585"
+		(property "LCSC PN" "C13585"
 			(at 93.98 175.26 0)
 			(effects
 				(font
@@ -10749,7 +10714,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C2984516"
+		(property "LCSC PN" "C2984516"
 			(at 104.14 101.6 0)
 			(effects
 				(font
@@ -10824,7 +10789,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870770"
+		(property "LCSC PN" "C870770"
 			(at 200.66 95.25 90)
 			(effects
 				(font
@@ -10901,7 +10866,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C134838"
+		(property "LCSC PN" "C134524"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10977,7 +10942,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5260729"
+		(property "LCSC PN" "C5260729"
 			(at 274.32 80.01 90)
 			(effects
 				(font
@@ -11054,7 +11019,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870792"
+		(property "LCSC PN" "C870792"
 			(at 337.82 88.9 0)
 			(effects
 				(font
@@ -11129,7 +11094,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C433394"
+		(property "LCSC PN" "C433394"
 			(at 78.74 148.59 0)
 			(effects
 				(font
@@ -11207,7 +11172,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C433394"
+		(property "LCSC PN" "C433394"
 			(at 220.98 176.53 90)
 			(effects
 				(font
@@ -11415,7 +11380,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C2092472"
+		(property "LCSC PN" "C2092472"
 			(at 312.42 92.71 90)
 			(effects
 				(font
@@ -11491,7 +11456,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C87361"
+		(property "LCSC PN" "C87361"
 			(at 115.57 82.55 0)
 			(effects
 				(font
@@ -11587,7 +11552,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5260729"
+		(property "LCSC PN" "C5260729"
 			(at 190.5 110.49 0)
 			(effects
 				(font
@@ -11662,7 +11627,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5260729"
+		(property "LCSC PN" "C5260729"
 			(at 213.36 85.09 90)
 			(effects
 				(font
@@ -11739,7 +11704,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C24497"
+		(property "LCSC PN" "C24497"
 			(at 41.91 81.28 90)
 			(effects
 				(font
@@ -11815,7 +11780,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C87361"
+		(property "LCSC PN" "C87361"
 			(at 201.93 85.09 0)
 			(effects
 				(font
@@ -11852,6 +11817,103 @@
 				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
 					(reference "U5")
 					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:Q_NPN_BCE")
+		(at 224.79 147.32 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b53b77dc-f69c-49dc-80cb-090d09827f49")
+		(property "Reference" "Q1"
+			(at 224.79 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Q_NPN_BCE"
+			(at 224.79 156.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-89-3_Handsoldering"
+			(at 227.33 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/CBI-2N2222AU/C21714170"
+			(at 224.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "NPN transistor, base/collector/emitter"
+			(at 224.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 224.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=C 3=E"
+			(at 224.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C21714170"
+			(at 224.79 147.32 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "126d2da3-ea3e-4b32-8c47-4148905414e6")
+		)
+		(pin "2"
+			(uuid "d39cb068-de67-4048-aa0a-5df8fe573fd1")
+		)
+		(pin "3"
+			(uuid "81fbc817-c384-4c1e-a232-5ad35d0fdc0d")
+		)
+		(instances
+			(project ""
+				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
+					(reference "Q1")
+					(unit 1)
 				)
 			)
 		)
@@ -11909,7 +11971,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C7432784"
+		(property "LCSC PN" "C7432784"
 			(at 256.54 138.43 90)
 			(effects
 				(font
@@ -12053,7 +12115,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 281.94 86.36 0)
 			(effects
 				(font
@@ -12112,7 +12174,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/Lelon-VZH471M1VTR1013/C134838"
+		(property "Datasheet" ""
 			(at 109.22 171.45 0)
 			(effects
 				(font
@@ -12130,7 +12192,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C134838"
+		(property "LCSC PN" "C134524"
 			(at 109.22 171.45 0)
 			(effects
 				(font
@@ -12207,7 +12269,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C134838"
+		(property "LCSC PN" "C134524"
 			(at 130.81 171.45 0)
 			(effects
 				(font
@@ -12347,7 +12409,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870623"
+		(property "LCSC PN" "C870623"
 			(at 327.66 82.55 90)
 			(effects
 				(font
@@ -12425,7 +12487,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 93.98 74.93 0)
 			(effects
 				(font
@@ -12520,7 +12582,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e4bdaf34-5214-4418-9e9f-f35204d7bbeb")
@@ -12664,7 +12726,7 @@
 		(at 110.49 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e7125cc5-411e-4d17-b6ca-2c9510fe6df9")
@@ -12783,7 +12845,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C351465"
+		(property "LCSC PN" "C351465"
 			(at 93.98 86.36 0)
 			(effects
 				(font
@@ -12858,7 +12920,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C870770"
+		(property "LCSC PN" "C870770"
 			(at 382.27 95.25 90)
 			(effects
 				(font
@@ -12935,7 +12997,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C2984516"
+		(property "LCSC PN" "C2984516"
 			(at 292.1 101.6 0)
 			(effects
 				(font
@@ -12963,7 +13025,7 @@
 		(at 25.4 74.93 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f2f32707-0fce-4220-84e6-e62446e22be6")
@@ -13029,7 +13091,7 @@
 		(at 104.14 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f436cde3-95c1-46d1-83bd-3dda2be17b20")
@@ -13164,7 +13226,7 @@
 		(at 298.45 97.79 90)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f9334ee5-ece3-411d-9e6b-a062ba9bf230")
@@ -13229,104 +13291,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Simulation_SPICE:NPN")
-		(at 224.79 152.4 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fd0a5851-afac-4472-a9b9-7c776be7c801")
-		(property "Reference" "BC548"
-			(at 224.79 143.51 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NPN"
-			(at 224.79 146.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
-			(at 224.79 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 224.79 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 224.79 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "NPN"
-			(at 224.79 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" "GUMMELPOON"
-			(at 224.79 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=C 2=B 3=E"
-			(at 224.79 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "57bb6fc4-8e9c-4205-b8dc-48bd6163c8a3")
-		)
-		(pin "1"
-			(uuid "ddd0e4a2-9816-46e3-9296-c86e351f293f")
-		)
-		(pin "3"
-			(uuid "fa06ce0e-c6a1-4143-912f-c076eee04104")
-		)
-		(instances
-			(project "RIAA"
-				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
-					(reference "BC548")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 138.43 171.45 180)
 		(unit 1)
@@ -13380,7 +13344,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C24497"
+		(property "LCSC PN" "C24497"
 			(at 144.78 171.45 0)
 			(effects
 				(font
