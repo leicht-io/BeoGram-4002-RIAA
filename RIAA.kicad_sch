@@ -6639,7 +6639,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
+		(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf, https://jlcpcb.com/partdetail/OmronElectronics-G6K_2F_Y_TRDC24/C5278023"
 			(at 270.51 185.42 0)
 			(effects
 				(font
@@ -6648,13 +6648,21 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Miniature 2-pole relay, Single-side Stable"
+		(property "Description" "Miniature 2-pole relay, Single-side Stable, 24V"
 			(at 270.51 185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C5278023"
+			(at 270.51 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "8"
@@ -7451,7 +7459,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/YAGEO-RT1206BRD075K6L/C870816"
 			(at 77.47 175.26 0)
 			(effects
 				(font
@@ -7467,6 +7475,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C870816"
+			(at 77.47 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -7575,16 +7591,17 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2"
+		(property "Footprint" "Package_TO_SOT_SMD:TO-263-3_TabPin2"
 			(at 77.47 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
+				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm317.pdf, https://jlcpcb.com/partdetail/TexasInstruments-LM317KTTR/C88007"
 			(at 77.47 160.02 0)
 			(effects
 				(font
@@ -7600,6 +7617,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C88007"
+			(at 77.47 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "3"
@@ -7790,7 +7815,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf,https://jlcpcb.com/partdetail/TexasInstruments-OPA2134UA2K5/C87361"
 			(at 303.53 82.55 0)
 			(effects
 				(font
@@ -7806,6 +7831,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C87361"
+			(at 303.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "8"
@@ -7947,7 +7980,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/YAGEO-RT1206BRD07300RL/C870638"
 			(at 93.98 165.1 0)
 			(effects
 				(font
@@ -7963,6 +7996,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C870638"
+			(at 93.98 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -8169,6 +8210,14 @@
 				(hide yes)
 			)
 		)
+		(property "LSCS PN" "C24497"
+			(at 25.4 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "263a30cc-c87e-4734-9ef2-eccab6f5cbc4")
 		)
@@ -8286,7 +8335,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/4817-1206W4F1001T5E/C4410"
 			(at 243.84 138.43 0)
 			(effects
 				(font
@@ -8302,6 +8351,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C4410"
+			(at 243.84 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -8353,7 +8410,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/18588-1206W4F1003T5E/C17900"
 			(at 243.84 158.75 0)
 			(effects
 				(font
@@ -8369,6 +8426,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C17900"
+			(at 243.84 158.75 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -8489,7 +8554,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf,https://jlcpcb.com/partdetail/TexasInstruments-OPA2134UA2K5/C87361"
 			(at 40.64 93.98 0)
 			(effects
 				(font
@@ -8499,6 +8564,15 @@
 			)
 		)
 		(property "Description" "Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"
+			(at 40.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C87361"
 			(at 40.64 93.98 0)
 			(effects
 				(font
@@ -8643,7 +8717,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf,https://jlcpcb.com/partdetail/TexasInstruments-OPA2134UA2K5/C87361"
 			(at 24.13 93.98 0)
 			(effects
 				(font
@@ -8653,6 +8727,15 @@
 			)
 		)
 		(property "Description" "Dual SoundPlus High Performance Audio Operational Amplifiers, DIP-8/SOIC-8"
+			(at 24.13 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C87361"
 			(at 24.13 93.98 0)
 			(effects
 				(font
@@ -8729,7 +8812,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf,https://jlcpcb.com/partdetail/TexasInstruments-OPA2134UA2K5/C87361"
 			(at 383.54 85.09 0)
 			(effects
 				(font
@@ -8745,6 +8828,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C87361"
+			(at 383.54 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "8"
@@ -9154,7 +9245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MiniMELF"
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 104.14 165.1 0)
 			(effects
 				(font
@@ -9163,7 +9254,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Shikues-1N4002G/C433393"
 			(at 104.14 165.1 0)
 			(effects
 				(font
@@ -9179,6 +9270,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C433393"
+			(at 104.14 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -10038,7 +10137,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 64.77 170.18 0)
 			(effects
 				(font
@@ -10047,7 +10146,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/25237-CL31B104KBCNNNC/C24497"
 			(at 64.77 170.18 0)
 			(effects
 				(font
@@ -10063,6 +10162,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C24497"
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -10177,7 +10284,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 93.98 175.26 0)
 			(effects
 				(font
@@ -10186,7 +10293,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
 			(at 93.98 175.26 0)
 			(effects
 				(font
@@ -10202,6 +10309,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C13585"
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -10517,7 +10632,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_MiniMELF"
+		(property "Footprint" "Diode_SMD:D_SMA"
 			(at 78.74 148.59 0)
 			(effects
 				(font
@@ -10526,7 +10641,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Shikues-1N4004G/C433394"
 			(at 78.74 148.59 0)
 			(effects
 				(font
@@ -10542,6 +10657,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C433394"
+			(at 78.74 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -10864,7 +10987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf,https://jlcpcb.com/partdetail/TexasInstruments-OPA2134UA2K5/C87361"
 			(at 115.57 82.55 0)
 			(effects
 				(font
@@ -10880,6 +11003,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C87361"
+			(at 115.57 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "8"
@@ -11106,6 +11237,14 @@
 				(hide yes)
 			)
 		)
+		(property "LSCS PN" "C24497"
+			(at 41.91 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cf00dc0f-c888-431e-a440-b8e0ab9a5549")
 		)
@@ -11156,7 +11295,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf"
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa134.pdf,https://jlcpcb.com/partdetail/TexasInstruments-OPA2134UA2K5/C87361"
 			(at 201.93 85.09 0)
 			(effects
 				(font
@@ -11172,6 +11311,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C87361"
+			(at 201.93 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "8"
@@ -11242,7 +11389,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/Chinocera-HGC1206R5107M100NSPJ/C7432784"
 			(at 256.54 138.43 0)
 			(effects
 				(font
@@ -11258,6 +11405,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C7432784"
+			(at 256.54 138.43 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "2"
@@ -11817,7 +11972,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
 		(pin "3"
@@ -12484,7 +12638,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs"
+		(property "Datasheet" ""
 			(at 224.79 88.9 0)
 			(effects
 				(font
@@ -12493,7 +12647,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter"
+		(property "Description" ""
 			(at 224.79 152.4 0)
 			(effects
 				(font
@@ -12583,7 +12737,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/25237-CL31B104KBCNNNC/C24497"
 			(at 129.54 171.45 0)
 			(effects
 				(font
@@ -12599,6 +12753,14 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "LSCS PN" "C24497"
+			(at 129.54 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
