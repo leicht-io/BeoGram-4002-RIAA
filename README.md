@@ -1,5 +1,5 @@
 n# RIAA Schematics for BeoGram 4002
-
+/home/cle/backup
 This repository hosts a KiCad project for an open-source RIAA equalization circuit designed for use with the BeoGram 4002 turntable.
 
 Currently, the project is a work in progress, serving as a prototype while I expand my understanding of audio circuits and operational amplifiers during development.
