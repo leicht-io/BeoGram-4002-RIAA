@@ -35,8 +35,6 @@ The design is a **dual-stage active RIAA equalization circuit**, based on the cl
 
 ## Images
 
-![SMD Prototype](./images/img.png)
-
 ![Schematic Overview](./images/RIAA.png)
 
 ---
