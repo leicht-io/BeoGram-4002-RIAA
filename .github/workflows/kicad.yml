@@ -47,7 +47,7 @@ jobs:
           path: reports/
 
   outputs:
-    name: Build outputs
+    name: Fabrication outputs
     runs-on: ubuntu-latest
     container:
       image: kicad/kicad:10.0-full
@@ -59,8 +59,15 @@ jobs:
 
       - name: Schematic PDF
         run: |
-          mkdir -p out
+          mkdir -p out/gerbers
           kicad-cli sch export pdf -o out/RIAA-schematic.pdf RIAA.kicad_sch
+
+      - name: Gerbers and drill
+        run: |
+          kicad-cli pcb export gerbers --board-plot-params -o out/gerbers/ RIAA.kicad_pcb
+          kicad-cli pcb export drill --format excellon --generate-map --map-format pdf \
+            -o out/gerbers/ RIAA.kicad_pcb
+          cd out/gerbers && python3 -c "import shutil; shutil.make_archive('../RIAA-gerbers', 'zip', '.')"
 
       - name: BOM and pick-and-place
         run: |
@@ -76,7 +83,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: outputs
+          name: fabrication
           path: out/
 
   release:
@@ -89,7 +96,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: outputs
+          name: fabrication
           path: out
 
       - name: Create GitHub release
@@ -98,6 +105,6 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" \
             --title "$GITHUB_REF_NAME" --generate-notes --draft \
-            out/RIAA-schematic.pdf \
+            out/RIAA-gerbers.zip out/RIAA-schematic.pdf \
             out/RIAA-bom-full.csv out/RIAA-bom-jlcpcb.csv out/RIAA-cpl-jlcpcb.csv \
             out/RIAA-top.png out/RIAA-bottom.png

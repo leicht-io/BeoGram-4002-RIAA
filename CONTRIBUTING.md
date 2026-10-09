@@ -23,7 +23,7 @@ Use [GitHub Discussions](../../discussions) for questions, build help and ideas.
   - If you add a part, fill in `LCSC PN` (for JLCPCB assembly) or `PN` (manufacturer part number) and a datasheet or shop link.
   - Mark parts that are soldered by hand as *Exclude from BOM*. CI still lists them in the full BOM with `Assembly = Hand`.
 - **Screenshots in the PR description.** KiCad diffs are hard to read, so add before/after screenshots of the schematic and PCB areas you changed.
-- **Don't commit generated files** (zips, BOMs, backups). CI builds the BOMs, schematic PDF and renders on every PR. You can download them from the workflow run's *outputs* artifact.
+- **Don't commit generated files** (gerbers, zips, BOMs, backups). CI builds them on every PR. You can download them from the workflow run's *fabrication* artifact.
 - Put new project-local symbols and footprints in `parts/`, and reference them with `${KIPRJMOD}` paths.
 
 ## Continuous integration
@@ -32,11 +32,11 @@ Every PR runs the *KiCad* workflow:
 
 - **DRC** with schematic parity. A failure blocks the merge.
 - **ERC.** Report-only for now, until the existing ERC issues are fixed.
-- **Build outputs:** schematic PDF, BOMs, pick-and-place file and 3D renders.
+- **Fabrication outputs:** schematic PDF, gerbers, BOMs, pick-and-place file and 3D renders.
 
 ## Releases
 
-Maintainers tag releases as `vMAJOR.MINOR` (e.g. `v0.2`). Pushing a tag makes CI build a draft GitHub release with these outputs, which a maintainer reviews and publishes. Each hardware change goes in [CHANGELOG.md](./CHANGELOG.md).
+Maintainers tag releases as `vMAJOR.MINOR` (e.g. `v0.2`). Pushing a tag makes CI build a draft GitHub release with the fabrication files, which a maintainer reviews and publishes. Each hardware change goes in [CHANGELOG.md](./CHANGELOG.md).
 
 ## Licence
 

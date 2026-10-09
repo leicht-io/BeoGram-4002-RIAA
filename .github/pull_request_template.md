@@ -11,5 +11,5 @@
 - [ ] ERC/DRC run, no new errors
 - [ ] PCB updated from schematic (F8)
 - [ ] New parts have `LCSC PN` or `PN` and a datasheet link
-- [ ] No generated files committed (zips, backups)
+- [ ] No generated files committed (gerbers, zips, backups)
 - [ ] CHANGELOG.md updated (for hardware changes)
