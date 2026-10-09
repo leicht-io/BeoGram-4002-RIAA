@@ -1,5 +1,9 @@
 # BeoGram 4002 RIAA Preamp
 
+[![KiCad](https://github.com/leicht-io/BeoGram-4002-RIAA/actions/workflows/kicad.yml/badge.svg)](https://github.com/leicht-io/BeoGram-4002-RIAA/actions/workflows/kicad.yml)
+[![Hardware licence: CERN-OHL-S v2](https://img.shields.io/badge/hardware-CERN--OHL--S%20v2-blue)](./LICENSE)
+[![Docs licence: CC BY-SA 4.0](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-lightgrey)](./LICENSE-DOCS)
+
 An open-source RIAA phono preamplifier board for the Bang & Olufsen **BeoGram 4002 / 4004** turntable, designed in KiCad.
 
 ![PCB render](./images/RIAA.png)
@@ -13,6 +17,7 @@ An open-source RIAA phono preamplifier board for the Bang & Olufsen **BeoGram 40
 | **Docs licence** | [CC BY-SA 4.0](./LICENSE-DOCS) |
 
 > This project is community driven. Build reports, measurements and design improvements are very welcome – see [CONTRIBUTING.md](./CONTRIBUTING.md).
+> Questions and build help: [Discussions](https://github.com/leicht-io/BeoGram-4002-RIAA/discussions).
 
 ---
 
@@ -74,10 +79,13 @@ A dual-stage active/passive RIAA equalizer per channel, based on the classic LM8
 
 ## Getting the fabrication files
 
-Fabrication files are **not committed** to the repository. CI builds them from the KiCad sources:
+Gerbers and other fabrication files are **not committed** to the repository. CI generates them from the KiCad sources on every push, so they always match the design:
 
-- **Releases:** every tagged version (`v*`) has a GitHub release with gerbers, a schematic PDF, the BOMs, the pick-and-place file and renders.
-- **Latest `main` / any PR:** open the *KiCad* workflow run under the **Actions** tab and download the `fabrication` artifact.
+- **Releases:** every tagged version (`v*`) has a [GitHub release](https://github.com/leicht-io/BeoGram-4002-RIAA/releases) with the gerber zip, a schematic PDF, the BOMs, the pick-and-place file and renders.
+- **Latest `main` / any PR:** open the latest [KiCad workflow run](https://github.com/leicht-io/BeoGram-4002-RIAA/actions/workflows/kicad.yml) and download the `fabrication` artifact (you must be logged in to GitHub).
+- **Locally:** in KiCad, *File → Fabrication Outputs*, or run the `kicad-cli` commands from [`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml).
+
+The gerbers of the first (v1) prototype are no longer in the tree but remain in the git history.
 
 The CI produces two BOMs:
 
