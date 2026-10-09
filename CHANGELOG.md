@@ -5,7 +5,7 @@ Hardware revisions of the BeoGram 4002 RIAA board.
 ## [Unreleased]
 
 - Fixed misspelled `LCSC PN` fields on K1 and RV1 so they appear in the JLCPCB BOM.
-- Repository: switched the licence to CERN-OHL-S v2 (hardware) / CC BY-SA 4.0 (docs). Gerbers are no longer published; BOMs, schematic PDF and renders are built by CI and attached to releases.
+- Repository: switched the licence to CERN-OHL-S v2 (hardware) / CC BY-SA 4.0 (docs). BOMs, schematic PDF and renders are built by CI and attached to releases.
 
 ## Prototype v2 – SMD (2026)
 
