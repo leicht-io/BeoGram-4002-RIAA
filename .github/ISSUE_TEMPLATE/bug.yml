@@ -1,0 +1,26 @@
+name: Bug / design problem
+description: Something in the schematic, PCB, BOM or docs is wrong.
+labels: ["bug"]
+body:
+  - type: input
+    id: revision
+    attributes:
+      label: Board revision / release
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Reference designators, nets, file names – be as specific as you can.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, measurements, datasheet references.
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix

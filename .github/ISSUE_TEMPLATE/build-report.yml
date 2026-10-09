@@ -1,0 +1,44 @@
+name: Build report
+description: Tell us about a board you built – working or not.
+title: "[Build] "
+labels: ["build report"]
+body:
+  - type: input
+    id: revision
+    attributes:
+      label: Board revision / release
+      placeholder: e.g. v0.2, or commit SHA
+    validations:
+      required: true
+  - type: input
+    id: turntable
+    attributes:
+      label: Turntable
+      placeholder: e.g. BeoGram 4002 type 5513
+    validations:
+      required: true
+  - type: input
+    id: cartridge
+    attributes:
+      label: Cartridge
+      placeholder: e.g. B&O MMC 20 EN
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Works well
+        - Works, with issues
+        - Does not work
+    validations:
+      required: true
+  - type: textarea
+    id: assembly
+    attributes:
+      label: Assembly
+      description: Where was it manufactured and assembled? Any part substitutions?
+  - type: textarea
+    id: notes
+    attributes:
+      label: Observations
+      description: Sound, hum, noise, mute relay timing, measurements, photos…

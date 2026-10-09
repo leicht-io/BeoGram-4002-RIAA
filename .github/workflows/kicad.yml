@@ -1,0 +1,110 @@
+name: KiCad
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: ERC / DRC
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    env:
+      HOME: /root
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: DRC (errors and schematic parity)
+        run: |
+          mkdir -p reports
+          kicad-cli pcb drc --severity-error --schematic-parity --exit-code-violations \
+            -o reports/drc.rpt RIAA.kicad_pcb
+
+      # ERC is report-only until the unused pins (P10, K1, RV1) have no-connect flags
+      # and the supply nets have PWR_FLAGs. Remove continue-on-error once ERC is clean.
+      - name: ERC
+        continue-on-error: true
+        run: |
+          kicad-cli sch erc --severity-error --exit-code-violations \
+            -o reports/erc.rpt RIAA.kicad_sch
+
+      - name: Show reports
+        if: always()
+        run: cat reports/*.rpt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reports
+          path: reports/
+
+  outputs:
+    name: Fabrication outputs
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0-full
+      options: --user root
+    env:
+      HOME: /root
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Schematic PDF
+        run: |
+          mkdir -p out/gerbers
+          kicad-cli sch export pdf -o out/RIAA-schematic.pdf RIAA.kicad_sch
+
+      - name: Gerbers and drill
+        run: |
+          kicad-cli pcb export gerbers --board-plot-params -o out/gerbers/ RIAA.kicad_pcb
+          kicad-cli pcb export drill --format excellon --generate-map --map-format pdf \
+            -o out/gerbers/ RIAA.kicad_pcb
+          cd out/gerbers && python3 -c "import shutil; shutil.make_archive('../RIAA-gerbers', 'zip', '.')"
+
+      - name: BOM and pick-and-place
+        run: |
+          kicad-cli sch export netlist --format kicadxml -o out/RIAA-netlist.xml RIAA.kicad_sch
+          kicad-cli pcb export pos --format csv --units mm --side both --exclude-dnp \
+            -o out/RIAA-positions.csv RIAA.kicad_pcb
+          python3 scripts/make_bom.py out/RIAA-netlist.xml out/RIAA-positions.csv out
+
+      - name: 3D renders
+        run: |
+          kicad-cli pcb render --side top --width 1600 --height 1200 -o out/RIAA-top.png RIAA.kicad_pcb
+          kicad-cli pcb render --side bottom --width 1600 --height 1200 -o out/RIAA-bottom.png RIAA.kicad_pcb
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fabrication
+          path: out/
+
+  release:
+    name: Release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [checks, outputs]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: fabrication
+          path: out
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" \
+            --title "$GITHUB_REF_NAME" --generate-notes --draft \
+            out/RIAA-gerbers.zip out/RIAA-schematic.pdf \
+            out/RIAA-bom-full.csv out/RIAA-bom-jlcpcb.csv out/RIAA-cpl-jlcpcb.csv \
+            out/RIAA-top.png out/RIAA-bottom.png

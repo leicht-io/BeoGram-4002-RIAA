@@ -7043,7 +7043,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C5278023"
+		(property "LCSC PN" "C5278023"
 			(at 270.51 185.42 0)
 			(effects
 				(font
@@ -12949,7 +12949,7 @@
 				(hide yes)
 			)
 		)
-		(property "LSCS PN" "C780218"
+		(property "LCSC PN" "C780218"
 			(at 262.89 158.75 90)
 			(effects
 				(font
@@ -13545,7 +13545,7 @@
 				(hide yes)
 			)
 		)
-		(property " PN" "KEMET MMK"
+		(property "PN" "KEMET MMK"
 			(at 298.45 97.79 90)
 			(effects
 				(font
