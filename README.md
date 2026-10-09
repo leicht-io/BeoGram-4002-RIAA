@@ -25,7 +25,7 @@ An open-source RIAA phono preamplifier board for the Bang & Olufsen **BeoGram 40
 
 - [Technical overview](#technical-overview)
 - [Connectors](#connectors)
-- [Getting the fabrication files](#getting-the-fabrication-files)
+- [Getting the build files](#getting-the-build-files)
 - [Building one](#building-one)
 - [Known issues and roadmap](#known-issues-and-roadmap)
 - [Repository layout](#repository-layout)
@@ -77,15 +77,14 @@ A dual-stage active/passive RIAA equalizer per channel, based on the classic LM8
 | 3 | R OUT |
 | 2, 4, 5, 6 | GND |
 
-## Getting the fabrication files
+## Getting the build files
 
-Gerbers and other fabrication files are **not committed** to the repository. CI generates them from the KiCad sources on every push, so they always match the design:
+The project does not publish gerbers. Generate them yourself from `RIAA.kicad_pcb` (*File → Fabrication Outputs* in KiCad) for the fab you use.
 
-- **Releases:** every tagged version (`v*`) has a [GitHub release](https://github.com/leicht-io/BeoGram-4002-RIAA/releases) with the gerber zip, a schematic PDF, the BOMs, the pick-and-place file and renders.
-- **Latest `main` / any PR:** open the latest [KiCad workflow run](https://github.com/leicht-io/BeoGram-4002-RIAA/actions/workflows/kicad.yml) and download the `fabrication` artifact (you must be logged in to GitHub).
-- **Locally:** in KiCad, *File → Fabrication Outputs*, or run the `kicad-cli` commands from [`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml).
+CI builds the other outputs from the KiCad sources on every push, so they always match the design:
 
-The gerbers of the first (v1) prototype are no longer in the tree but remain in the git history.
+- **Releases:** every tagged version (`v*`) has a [GitHub release](https://github.com/leicht-io/BeoGram-4002-RIAA/releases) with a schematic PDF, the BOMs, the pick-and-place file and renders.
+- **Latest `main` / any PR:** open the latest [KiCad workflow run](https://github.com/leicht-io/BeoGram-4002-RIAA/actions/workflows/kicad.yml) and download the `outputs` artifact (you must be logged in to GitHub).
 
 The CI produces two BOMs:
 
@@ -96,7 +95,7 @@ The CI produces two BOMs:
 
 ## Building one
 
-1. Order the board with SMT assembly using the gerber zip, `RIAA-bom-jlcpcb.csv` and `RIAA-cpl-jlcpcb.csv`. Check the part rotations in JLCPCB's preview before confirming.
+1. Generate gerbers from `RIAA.kicad_pcb` and order the board with SMT assembly, using `RIAA-bom-jlcpcb.csv` and `RIAA-cpl-jlcpcb.csv`. Check the part rotations in JLCPCB's preview before confirming.
 2. Hand-solder the parts marked `Hand` in `RIAA-bom-full.csv`: the film capacitors C101–C105 and C201–C205, and C103/C203.
 3. Set RV1 for the unmute delay you want.
 4. Install it in the turntable. *An illustrated installation guide is still missing – contributions are very welcome.*
