@@ -1,6 +1,21 @@
+# IDE
 /.idea/
-/RIAA-backups/
-/~RIAA.kicad_sch.lck
-/~RIAA.kicad_pcb.lck
-/~RIAA.kicad_sch.lck
-/fp-info-cache
+
+# KiCad per-user / temporary files
+*.kicad_prl
+*.lck
+~*.lck
+fp-info-cache
+*-backups/
+_autosave-*
+\#auto_saved_files#
+*.wbk
+
+# Generated fabrication output (built by CI, attached to GitHub releases)
+/production/
+/prototype_v1_jlcpcb/
+/out/
+*.zip
+*.gbr
+*.gbrjob
+*.drl

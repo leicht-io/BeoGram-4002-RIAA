@@ -1,0 +1,23 @@
+name: Design proposal
+description: Propose a change to the circuit or layout.
+labels: ["design proposal"]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: What problem does this solve, or what does it improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Affected parts/nets, new values, schematic sketch.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: How can it be verified?
+      description: Simulation, calculation, measurement plan.
