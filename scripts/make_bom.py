@@ -29,7 +29,8 @@ def read_components(netlist):
     parts = []
     for comp in ET.parse(netlist).getroot().iter("comp"):
         props = {p.get("name"): p.get("value") for p in comp.iter("property")}
-        if "dnp" in props:
+        # Net ties are copper on the board, not parts.
+        if "dnp" in props or comp.findtext("footprint", "").startswith("NetTie:"):
             continue
         fields = {f.get("name"): (f.text or "") for f in comp.iter("field")}
         parts.append({

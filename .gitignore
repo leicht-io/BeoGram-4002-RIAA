@@ -3,6 +3,7 @@
 
 # KiCad per-user / temporary files
 *.kicad_prl
+/.history/
 *.lck
 ~*.lck
 fp-info-cache

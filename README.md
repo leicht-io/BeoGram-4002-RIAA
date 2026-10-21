@@ -10,8 +10,8 @@ An open-source RIAA phono preamplifier board for the Bang & Olufsen **BeoGram 40
 
 | | |
 |---|---|
-| **Status** | Prototype v2 (SMD) – manufactured and tested working |
-| **Tool** | KiCad 10 (files are readable by KiCad 9) |
+| **Status** | Prototype v3 (SMD) – designed, not built yet. v2 was manufactured and tested working. |
+| **Tool** | KiCad 10 |
 | **Board** | 2-layer, 1.6 mm, ~112 × 202 mm |
 | **Hardware licence** | [CERN-OHL-S v2](./LICENSE) |
 | **Docs licence** | [CC BY-SA 4.0](./LICENSE-DOCS) |
@@ -42,26 +42,48 @@ A dual-stage active/passive RIAA equalizer per channel, based on the classic LM8
 - **Stage 1 (U5A / U6A):** non-inverting gain stage that sets the 3180 µs / 318 µs part of the RIAA curve.
 - **75 µs network:** passive RC between the stages.
 - **Stage 2 (U5B / U6B):** flat gain of about 3.15×.
-- **Gain:** about 34 dB at 1 kHz (calculated, not yet measured).
-- **Power:** an LM317 makes about 24.6 V from the turntable's 30 V rail. The op-amps run from this single supply, biased at half the supply.
-- **Mute relay:** an Omron G6K-2 shorts both outputs to ground until the turntable's `RELAY ON` signal has been present for a while. The delay is set with RV1, and the board mutes instantly when the signal drops.
+- **Gain:** about 35 dB at 1 kHz (simulated, not yet measured).
+- **Power:** an LM317 makes about 20.8 V from the turntable's 30 V rail, which is unregulated (B&O bridge rectifier and 4000 µF). The op-amps run from this single supply.
+- **Bias:** each channel has a filtered half-supply reference (`VREF_L` / `VREF_R`). Stage 1 is biased from it, so supply ripple is not amplified, and stage 2 is DC-coupled to stage 1. R103/R203 (47 k) also set the 47 kΩ cartridge load.
+- **Grounding:** each pickup return runs next to its signal trace and joins GND at one point, at the input stage (net ties NT1/NT2).
+- **Mute relay:** an Omron G6K-2 shorts both outputs to ground until the turntable's `RELAY ON` signal has been present for a while. The delay is set with RV1, and the board mutes instantly when the signal drops. Q1 is a Darlington (BCV49), as on the original B&O board.
+
+### Simulated response
+
+![Simulated RIAA response: the v3 response follows the RIAA curve within 0.1 dB from 50 Hz to 20 kHz; v2 rises to +0.7 dB at 10–20 kHz](./images/riaa-response.svg)
+
+Simulated with nominal part values, an ideal source and a 47 kΩ amplifier input. It has not been measured yet.
+
+| Frequency | v3 deviation from RIAA | v2 deviation from RIAA |
+|---|---|---|
+| 20 Hz | −0.59 dB | −0.85 dB |
+| 50 Hz | −0.07 dB | −0.23 dB |
+| 100 Hz | +0.03 dB | −0.12 dB |
+| 1 kHz | 0 (reference) | 0 (reference) |
+| 10 kHz | −0.02 dB | +0.70 dB |
+| 20 kHz | −0.03 dB | +0.73 dB |
+
+The roll-off below 50 Hz comes from the coupling capacitors. Real boards also vary with the 5 % tolerance of the RIAA film capacitors. To regenerate the chart after changing values, edit them in `scripts/riaa_response.py` and run `python3 scripts/riaa_response.py images/riaa-response.svg`.
 
 ## Connectors
+
+The board takes the place of B&O's PCB 8 (the muting / remote module, 8005014). Pin *n* of the original 9-pin P8 and P10 is pins 2*n*−1 and 2*n* here.
 
 **P8 – From main PCB** (2×9, 2.54 mm)
 
 | Pin | Signal |
 |---|---|
 | 1, 2 | RELAY ON |
-| 3, 4, 5, 6 | GND |
+| 3, 4 | GND (main board) |
+| 5, 6 | Pickup cable shields (GND) |
 | 7, 8 | L IN (pickup) |
-| 9, 10 | GND |
+| 9, 10 | L pickup return (joins GND only at NT1) |
 | 11, 12 | R IN (pickup) |
-| 13, 14 | GND |
+| 13, 14 | R pickup return (joins GND only at NT2) |
 | 15, 16 | 21 V (relay supply) |
 | 17, 18 | 30 V (preamp supply) |
 
-**P10 – From Keyboard** (2×9, 2.54 mm). Power only; the other pins are not connected.
+**P10 – From Keyboard** (2×9, 2.54 mm). Power only; the other pins are not connected. Like the original module, the board passes 30 V, 21 V and GND from P8 through to the keyboard.
 
 | Pin | Signal |
 |---|---|
@@ -96,19 +118,17 @@ The CI produces two BOMs:
 
 ## Building one
 
-1. Order the board with SMT assembly using the gerber zip, `RIAA-bom-jlcpcb.csv` and `RIAA-cpl-jlcpcb.csv`. Check the part rotations in JLCPCB's preview before confirming.
-2. Hand-solder the parts marked `Hand` in `RIAA-bom-full.csv`: the film capacitors C101–C105 and C201–C205, and C103/C203.
-3. Set RV1 for the unmute delay you want.
+1. Order the board with SMT assembly using the gerber zip, `RIAA-bom-jlcpcb.csv` and `RIAA-cpl-jlcpcb.csv`. Check the part rotations in JLCPCB's preview before confirming. Stock of the 0.1 % resistors in the RIAA network is low at times. A 1 % part of the same value is fine if one runs out.
+2. Hand-solder the parts marked `Hand` in `RIAA-bom-full.csv`: the film capacitors C101, C102, C105 and C201, C202, C205. C102/C202 and C105/C205 set the RIAA time constants, so tight-tolerance or matched parts give the most accurate curve.
+3. Set RV1 for the unmute delay you want (about 1 s to 10 s).
 4. Install it in the turntable. *An illustrated installation guide is still missing – contributions are very welcome.*
 
 Please post a **Build report** issue when you have built one, whether it worked or not.
 
 ## Known issues and roadmap
 
-- [ ] **Input load is ~23.5 kΩ, not 47 kΩ.** The cartridge sees the two 47 k bias resistors in parallel. B&O MMC cartridges are specified for 47 kΩ.
-- [ ] **All grounds are merged into a single GND net** (chassis, main board, pickup and output). Look at this first if hum shows up.
-- [ ] **C104 / C204 (2 µF film) have no part number.**
-- [ ] **ERC is not clean:** unused pins need no-connect flags and the supply nets need PWR_FLAGs.
+- [ ] **v3 has not been built yet.** The hum, bias and mute-relay fixes are simulated and the board passes DRC/ERC, but they still need to be confirmed on a real board (see [CHANGELOG.md](./CHANGELOG.md)).
+- [ ] **Hum on some turntables (v2).** If a v3 board still hums, check the 30 V rail, P10, and whether the turntable joins the pickup returns to ground somewhere else (see the [design notes](./docs/design-notes.md#hum-and-ground-loops)).
 - [ ] **No measurements yet:** RIAA deviation, noise and THD are still missing.
 - [ ] **No installation guide or photos yet.**
 
@@ -121,6 +141,7 @@ parts/                                     Project-local footprints (OPA2134 D8)
 docs/                                      Design notes
 images/                                    Renders and photos
 scripts/make_bom.py                        Builds the full and JLCPCB BOMs (used by CI)
+scripts/riaa_response.py                   Simulates the RIAA response and draws images/riaa-response.svg
 .github/                                   CI workflow, issue and PR templates
 ```
 

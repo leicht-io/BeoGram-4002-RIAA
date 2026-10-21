@@ -28,10 +28,7 @@ jobs:
           kicad-cli pcb drc --severity-error --schematic-parity --exit-code-violations \
             -o reports/drc.rpt RIAA.kicad_pcb
 
-      # ERC is report-only until the unused pins (P10, K1, RV1) have no-connect flags
-      # and the supply nets have PWR_FLAGs. Remove continue-on-error once ERC is clean.
       - name: ERC
-        continue-on-error: true
         run: |
           kicad-cli sch erc --severity-error --exit-code-violations \
             -o reports/erc.rpt RIAA.kicad_sch
