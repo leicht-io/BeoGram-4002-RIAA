@@ -1431,6 +1431,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:D_Zener"
 			(pin_numbers
 				(hide yes)
@@ -3277,12 +3417,6 @@
 		(uuid "33a1657e-e81f-430a-b666-82980f81cd65")
 	)
 	(junction
-		(at 398.78 162.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "33d496cf-d727-4a06-94f3-94becbeb6b64")
-	)
-	(junction
 		(at 292.1 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3313,12 +3447,6 @@
 		(uuid "4fdbb535-e75d-49b1-9500-375dae3d4288")
 	)
 	(junction
-		(at 396.24 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "50025c44-078f-4786-a218-d9f6ef8ced13")
-	)
-	(junction
 		(at 167.64 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3335,12 +3463,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "59c1fb15-dcbd-44f4-8f30-54d36c308ac5")
-	)
-	(junction
-		(at 393.7 162.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5c99a020-0213-4a11-9c40-1dcd7efadca9")
 	)
 	(junction
 		(at 337.82 82.55)
@@ -3602,7 +3724,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 85.09) (xy 219.71 85.09)
+			(xy 223.52 85.09) (xy 227.33 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3792,16 +3914,6 @@
 	)
 	(wire
 		(pts
-			(xy 393.7 170.18) (xy 396.24 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bf3d7ef-1ace-4733-a8d4-29c40b84b2b6")
-	)
-	(wire
-		(pts
 			(xy 342.9 193.04) (xy 342.9 205.74)
 		)
 		(stroke
@@ -3829,16 +3941,6 @@
 			(type default)
 		)
 		(uuid "22979d07-8c79-4656-b9e0-c52bc4393083")
-	)
-	(wire
-		(pts
-			(xy 393.7 162.56) (xy 393.7 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22c1defc-dd7b-40f0-8a20-e6798f71bd02")
 	)
 	(wire
 		(pts
@@ -3992,7 +4094,7 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 85.09) (xy 406.4 85.09)
+			(xy 406.4 85.09) (xy 414.02 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4352,16 +4454,6 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 162.56) (xy 398.78 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65831631-a2c3-4142-85a9-d20482fcfa09")
-	)
-	(wire
-		(pts
 			(xy 64.77 148.59) (xy 64.77 160.02)
 		)
 		(stroke
@@ -4449,16 +4541,6 @@
 			(type default)
 		)
 		(uuid "6e86e269-d940-4d8f-a3f8-873f15265fdf")
-	)
-	(wire
-		(pts
-			(xy 398.78 170.18) (xy 396.24 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f898da0-647f-4dfa-a3f1-506277f4db45")
 	)
 	(wire
 		(pts
@@ -4802,16 +4884,6 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 149.86) (xy 398.78 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "940ae8d5-b61c-4a4c-8563-67dca2f39ebf")
-	)
-	(wire
-		(pts
 			(xy 346.71 191.77) (xy 347.98 191.77)
 		)
 		(stroke
@@ -4929,16 +5001,6 @@
 			(type default)
 		)
 		(uuid "a14ca280-bd23-4d19-9baf-a8c94feeee75")
-	)
-	(wire
-		(pts
-			(xy 396.24 170.18) (xy 396.24 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1c4258b-16e6-4d0f-b021-d8bcb5e269c1")
 	)
 	(wire
 		(pts
@@ -5409,16 +5471,6 @@
 			(type default)
 		)
 		(uuid "cb160155-712d-45a4-b9df-3e80c0775586")
-	)
-	(wire
-		(pts
-			(xy 393.7 149.86) (xy 393.7 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc6456b0-ebae-41a3-b7b3-86bd9fe90ff8")
 	)
 	(wire
 		(pts
@@ -6160,7 +6212,7 @@
 	)
 	(global_label "R OUT RIAA"
 		(shape input)
-		(at 406.4 85.09 0)
+		(at 414.02 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6170,7 +6222,7 @@
 		)
 		(uuid "3ca71ea3-8c1e-4531-a558-a75c85872a15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 420.271 85.09 0)
+			(at 427.891 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6290,28 +6342,6 @@
 			)
 		)
 	)
-	(global_label "GND L OUT"
-		(shape input)
-		(at 393.7 149.86 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7afa3f15-9b2d-4afd-ab77-2c291832c127")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 393.7 136.4124 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape input)
 		(at 270.51 196.85 270)
@@ -6358,7 +6388,7 @@
 	)
 	(global_label "L OUT RIAA"
 		(shape input)
-		(at 219.71 85.09 0)
+		(at 227.33 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6368,7 +6398,7 @@
 		)
 		(uuid "81fcf450-7530-4a3e-8472-c78741109121")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 233.3391 85.09 0)
+			(at 240.9591 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6484,28 +6514,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND R OUT"
-		(shape input)
-		(at 398.78 149.86 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9e92b6f0-8402-43f0-82d9-14a01da7e520")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 398.78 136.1705 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -7445,7 +7453,7 @@
 				)
 			)
 		)
-		(property "Value" "LM317_TO-220"
+		(property "Value" "LM317"
 			(at 77.47 156.21 0)
 			(effects
 				(font
@@ -8530,72 +8538,6 @@
 			(project "RIAA"
 				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
 					(reference "R22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 396.24 172.72 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45d74cd8-1d7d-4411-a055-eed95d46227c")
-		(property "Reference" "#PWR021"
-			(at 396.24 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 396.24 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 396.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 396.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 396.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2dcc1cf8-5c45-4b1e-bd35-96564388feed")
-		)
-		(instances
-			(project "RIAA"
-				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -10137,8 +10079,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
-		(at 396.24 85.09 90)
+		(lib_id "Device:C_Small")
+		(at 403.86 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10146,7 +10088,7 @@
 		(dnp no)
 		(uuid "7c8d92d9-4bd3-47e6-a345-76f704f2328d")
 		(property "Reference" "C207"
-			(at 396.24 79.248 90)
+			(at 403.86 79.248 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10154,24 +10096,15 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 396.24 81.788 90)
+			(at 403.86 81.788 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
-			(at 396.24 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 396.24 85.09 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10179,8 +10112,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
-			(at 396.24 85.09 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10188,16 +10121,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
-			(at 396.24 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "JARSON"
-			(at 396.24 85.09 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10205,8 +10130,25 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "FZ1V100M0506"
-			(at 396.24 85.09 0)
+		(property "LCSC PN" "C13585"
+			(at 403.86 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 403.86 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10487,7 +10429,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 64.77 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10532,7 +10474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 64.77 170.18 0)
 			(effects
 				(font
@@ -10583,7 +10525,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 93.98 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10628,7 +10570,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 93.98 175.26 0)
 			(effects
 				(font
@@ -10790,7 +10732,7 @@
 				)
 			)
 		)
-		(property "Value" "4.3k"
+		(property "Value" "7.5k"
 			(at 200.66 92.964 90)
 			(effects
 				(font
@@ -10825,7 +10767,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C870770"
+		(property "LCSC PN" "C351451"
 			(at 200.66 95.25 90)
 			(effects
 				(font
@@ -10833,7 +10775,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "RESI"
 			(at 200.66 95.25 0)
 			(effects
 				(font
@@ -10842,7 +10784,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "RT1206BRD074K3L"
+		(property "MPN" "PTFR1206B7K50P9"
 			(at 200.66 95.25 0)
 			(effects
 				(font
@@ -10867,7 +10809,193 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:R")
+		(at 397.51 85.09 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c1cef61-843b-4e0d-ad59-9d29ebe47863")
+		(property "Reference" "R213"
+			(at 397.51 80.772 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 397.51 82.804 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 397.51 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17901"
+			(at 397.51 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1000T5E"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "823906ee-f936-4489-a565-196a88398100")
+		)
+		(pin "1"
+			(uuid "8f36c5b7-f248-4938-9b41-daedbf364150")
+		)
+		(instances
+			(project "RIAA"
+				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
+					(reference "R213")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 214.63 85.09 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9e2c3cb-5ec7-4108-85ff-0d270ccd53d3")
+		(property "Reference" "R113"
+			(at 214.63 80.772 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 214.63 82.804 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 214.63 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17901"
+			(at 214.63 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1000T5E"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1b3a3483-6d3e-4d2b-ae1b-81f8d33d90f3")
+		)
+		(pin "1"
+			(uuid "68206b4a-fe72-437f-9e0a-5922219823fe")
+		)
+		(instances
+			(project "RIAA"
+				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
+					(reference "R113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 124.46 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10884,7 +11012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470uF"
+		(property "Value" "10uF"
 			(at 121.666 173.99 0)
 			(effects
 				(font
@@ -10893,7 +11021,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10902,7 +11030,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/Lelon-VZH471M1VTR1013/C134838"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10911,7 +11039,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10920,7 +11048,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C134524"
+		(property "LCSC PN" "C13585"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10928,7 +11056,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Lelon"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10937,7 +11065,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "VZH471M1VTR-1013L"
+		(property "MPN" "CL31A106KBHNNNE"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -11774,8 +11902,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
-		(at 213.36 85.09 90)
+		(lib_id "Device:C_Small")
+		(at 220.98 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11783,7 +11911,7 @@
 		(dnp no)
 		(uuid "b0b8ad5c-d9ef-4a98-98da-fbda73157239")
 		(property "Reference" "C107"
-			(at 213.36 79.248 90)
+			(at 220.98 79.248 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11791,24 +11919,15 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 213.36 81.788 90)
+			(at 220.98 81.788 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
-			(at 213.36 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 213.36 85.09 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11816,8 +11935,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
-			(at 213.36 85.09 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11825,16 +11944,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
-			(at 213.36 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "JARSON"
-			(at 213.36 85.09 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11842,8 +11953,25 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "FZ1V100M0506"
-			(at 213.36 85.09 0)
+		(property "LCSC PN" "C13585"
+			(at 220.98 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 220.98 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12333,7 +12461,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 256.54 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12376,7 +12504,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 256.54 138.43 0)
 			(effects
 				(font
@@ -12881,7 +13009,7 @@
 				)
 			)
 		)
-		(property "Value" "4.3k"
+		(property "Value" "7.5k"
 			(at 382.27 92.964 90)
 			(effects
 				(font
@@ -12916,7 +13044,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C870770"
+		(property "LCSC PN" "C351451"
 			(at 382.27 95.25 90)
 			(effects
 				(font
@@ -12924,7 +13052,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "RESI"
 			(at 382.27 95.25 0)
 			(effects
 				(font
@@ -12933,7 +13061,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "RT1206BRD074K3L"
+		(property "MPN" "PTFR1206B7K50P9"
 			(at 382.27 95.25 0)
 			(effects
 				(font
@@ -13576,7 +13704,7 @@
 		(uuid "96b88dc0-5ce3-42b6-b128-01be208b20cc")
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 40.64 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13593,7 +13721,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 43.18 41.91 0)
 			(effects
 				(font
@@ -13602,7 +13730,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -13611,7 +13739,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/C12891"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -13620,7 +13748,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -13629,7 +13757,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
+		(property "LCSC PN" "C12891"
 			(at 43.18 44.45 0)
 			(effects
 				(font
@@ -13638,7 +13766,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "JARSON"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -13647,7 +13775,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "FZ1V100M0506"
+		(property "MPN" "CL31A226KAHNNNE"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -14120,7 +14248,7 @@
 		(uuid "1a2f70ce-c12d-463d-b2ea-752cdf47c036")
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 85.09 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14137,7 +14265,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 87.63 41.91 0)
 			(effects
 				(font
@@ -14146,7 +14274,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -14155,7 +14283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/C12891"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -14164,7 +14292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -14173,7 +14301,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
+		(property "LCSC PN" "C12891"
 			(at 87.63 44.45 0)
 			(effects
 				(font
@@ -14182,7 +14310,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "JARSON"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -14191,7 +14319,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "FZ1V100M0506"
+		(property "MPN" "CL31A226KAHNNNE"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -14755,6 +14883,14 @@
 			(justify left top)
 		)
 		(uuid "4627ded4-c4ce-41fd-b334-ee17a5f558b0")
+	)
+	(no_connect
+		(at 393.7 162.56)
+		(uuid "e2230fef-b6f3-4a67-bd1a-73c298cee866")
+	)
+	(no_connect
+		(at 398.78 162.56)
+		(uuid "e6fc44f4-ca41-4b74-b71c-5d32f9a1fd0a")
 	)
 	(no_connect
 		(at 266.7 158.75)
