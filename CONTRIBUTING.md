@@ -20,7 +20,7 @@ Use [GitHub Discussions](../../discussions) for questions, build help and ideas.
 - Before you open a PR:
   - Run **ERC** and **DRC** and don't add new errors.
   - Update the PCB from the schematic (F8), so the two match.
-  - If you add a part, fill in `LCSC PN` (for JLCPCB assembly) or `PN` (manufacturer part number) and a datasheet or shop link.
+  - If you add a part, fill in `Manufacturer` and `MPN` (manufacturer part number, used for the PCBWay turnkey BOM), `LCSC PN` if JLCPCB can assemble it, and a datasheet or shop link.
   - Mark parts that are soldered by hand as *Exclude from BOM*. CI still lists them in the full BOM with `Assembly = Hand`.
 - **Screenshots in the PR description.** KiCad diffs are hard to read, so add before/after screenshots of the schematic and PCB areas you changed.
 - **Don't commit generated files** (gerbers, zips, BOMs, backups). CI builds them on every PR. You can download them from the workflow run's *fabrication* artifact.

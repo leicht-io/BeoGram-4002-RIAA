@@ -103,23 +103,30 @@ The board takes the place of B&O's PCB 8 (the muting / remote module, 8005014). 
 
 Gerbers and other fabrication files are **not committed** to the repository. CI generates them from the KiCad sources on every push, so they always match the design:
 
-- **Releases:** every tagged version (`v*`) has a [GitHub release](https://github.com/leicht-io/BeoGram-4002-RIAA/releases) with the gerber zip, a schematic PDF, the BOMs, the pick-and-place file and renders.
+- **Releases:** every tagged version (`v*`) has a [GitHub release](https://github.com/leicht-io/BeoGram-4002-RIAA/releases) with the gerber zip, a schematic PDF, the BOMs, the pick-and-place files and renders.
 - **Latest `main` / any PR:** open the latest [KiCad workflow run](https://github.com/leicht-io/BeoGram-4002-RIAA/actions/workflows/kicad.yml) and download the `fabrication` artifact (you must be logged in to GitHub).
 - **Locally:** in KiCad, *File → Fabrication Outputs*, or run the `kicad-cli` commands from [`.github/workflows/kicad.yml`](./.github/workflows/kicad.yml).
 
 The gerbers of the first (v1) prototype are no longer in the tree but remain in the git history.
 
-The CI produces two BOMs:
+The CI produces these BOMs and pick-and-place (CPL) files:
 
 | File | Contents |
 |---|---|
-| `RIAA-bom-full.csv` | Every part. The `Assembly` column says whether a part is assembled by JLCPCB or soldered by hand. |
-| `RIAA-bom-jlcpcb.csv` + `RIAA-cpl-jlcpcb.csv` | Upload-ready files for JLCPCB SMT assembly. |
+| `RIAA-bom-full.csv` | Every part, with manufacturer, manufacturer part number (MPN) and LCSC number. The `Assembly` column says whether a part is assembled by JLCPCB or soldered by hand. |
+| `RIAA-bom-jlcpcb.csv` + `RIAA-cpl-jlcpcb.csv` | Upload-ready files for JLCPCB SMT assembly (parts from LCSC; film capacitors excluded). |
+| `RIAA-bom-pcbway.csv` + `RIAA-cpl-pcbway.csv` | Upload-ready files for PCBWay turnkey assembly. The BOM lists every part, including the film capacitors and connectors, by manufacturer and MPN, with the LCSC number as distributor part number. The CPL lists the surface-mount parts. |
+
+Every part in the schematic has `Manufacturer` and `MPN` fields; parts JLCPCB can place also have an `LCSC PN` field.
 
 ## Building one
 
-1. Order the board with SMT assembly using the gerber zip, `RIAA-bom-jlcpcb.csv` and `RIAA-cpl-jlcpcb.csv`. Check the part rotations in JLCPCB's preview before confirming. Stock of the 0.1 % resistors in the RIAA network is low at times. A 1 % part of the same value is fine if one runs out.
-2. Hand-solder the parts marked `Hand` in `RIAA-bom-full.csv`: the film capacitors C101, C102, C105 and C201, C202, C205. C102/C202 and C105/C205 set the RIAA time constants, so tight-tolerance or matched parts give the most accurate curve.
+1. Order the board with assembly from one of the two fabs:
+   - **JLCPCB:** SMT assembly with the gerber zip, `RIAA-bom-jlcpcb.csv` and `RIAA-cpl-jlcpcb.csv`. The film capacitors are not included (step 2).
+   - **PCBWay:** turnkey assembly with the gerber zip, `RIAA-bom-pcbway.csv` and `RIAA-cpl-pcbway.csv`. PCBWay sources every part, including the through-hole film capacitors and connectors, so step 2 is not needed.
+
+   Check the part rotations and the polarity of the diodes and electrolytic capacitors in the fab's preview before confirming. Stock of the 0.1 % resistors in the RIAA network is low at times. A 1 % part of the same value is fine if one runs out.
+2. For a JLCPCB board, hand-solder the parts marked `Hand` in `RIAA-bom-full.csv`: the film capacitors C101, C102, C105 and C201, C202, C205. C102/C202 and C105/C205 set the RIAA time constants, so tight-tolerance or matched parts give the most accurate curve.
 3. Set RV1 for the unmute delay you want (about 1 s to 10 s).
 4. Install it in the turntable. *An illustrated installation guide is still missing – contributions are very welcome.*
 
@@ -140,7 +147,7 @@ parts/                                     Project-local footprints (OPA2134 D8)
 3d-parts/                                  STL files for the 3D-printed board guides
 docs/                                      Design notes
 images/                                    Renders and photos
-scripts/make_bom.py                        Builds the full and JLCPCB BOMs (used by CI)
+scripts/make_bom.py                        Builds the full, JLCPCB and PCBWay BOMs and CPL files (used by CI)
 scripts/riaa_response.py                   Simulates the RIAA response and draws images/riaa-response.svg
 .github/                                   CI workflow, issue and PR templates
 ```
