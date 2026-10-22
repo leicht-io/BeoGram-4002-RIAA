@@ -47,7 +47,7 @@ A dual-stage active/passive RIAA equalizer per channel, based on the classic LM8
 - **Power:** an LM317 makes about 20.8 V from the turntable's 30 V rail, which is unregulated (B&O bridge rectifier and 4000 µF). The op-amps run from this single supply.
 - **Bias:** each channel has a filtered half-supply reference (`VREF_L` / `VREF_R`). Stage 1 is biased from it, so supply ripple is not amplified, and stage 2 is DC-coupled to stage 1. R103/R203 (47 k) also set the 47 kΩ cartridge load.
 - **Grounding:** each pickup return runs next to its signal trace and joins GND at one point, at the input stage (net ties NT1/NT2).
-- **Mute relay:** an Omron G6K-2 shorts both outputs to ground until the turntable's `RELAY ON` signal has been present for a while. The delay is set with RV1, and the board mutes instantly when the signal drops. Q1 is a Darlington (BCV49), as on the original B&O board.
+- **Mute relay:** an Omron G6K-2F-Y (24 V DC coil) shorts both outputs to ground until the turntable's `RELAY ON` signal has been present for a while. The delay is set with RV1, and the board mutes instantly when the signal drops. Q1 is a Darlington (BCV49), as on the original B&O board.
 - **Capacitors:** ceramic wherever a ceramic works. Six electrolytics remain (C103/C203, C106/C206, C108/C208), where a ceramic would pick up vibration or add distortion (see the [design notes](./docs/design-notes.md#capacitors)).
 
 ### Simulated response

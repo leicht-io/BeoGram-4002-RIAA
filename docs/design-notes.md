@@ -94,7 +94,7 @@ Each of them has its + side on the higher DC voltage (VREF, about 10 V, against 
 
 ## Mute relay
 
-- **How it mutes:** K1 is an Omron G6K-2 (DPDT, 24 V coil, 5.2 kΩ). Its normally-closed contacts (pins 3 and 6) short L OUT and R OUT to ground. When the coil is energised the contacts open and the signal passes.
+- **How it mutes:** K1 is an Omron G6K-2F-Y DC24 (DPDT, 24 V coil, 5.22 kΩ). Its common contacts (pins 3 and 6) are on GND, and with the coil off they rest on the normally-closed contacts (pins 2 and 7), which carry R OUT and L OUT. The coil gets about 20 V (21 V rail minus Q1), above its 18 V must-operate voltage. When the coil is energised the contacts open and the signal passes.
 - **Coil drive:** the coil runs from the 21 V rail and is switched by Q1. D7 is the flyback diode.
 - **Turn-on delay:** when `RELAY ON` (P8 pins 1–2) goes high, C33 (100 µF, in series with R21 1 k) charges through R22 (100 k) and RV1 (1 M trimmer). Q1 switches on once its base reaches about 1.2 V. The simulated delay is about 1 s with RV1 at 0 and about 8 s with RV1 at 1 MΩ (for a 17 V `RELAY ON`; longer if `RELAY ON` is lower).
 - **Turn-off:** when `RELAY ON` goes low, D8 pulls the base low and discharges C33. The outputs mute immediately.
