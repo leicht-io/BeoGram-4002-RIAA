@@ -5,7 +5,7 @@ Theory of operation for the BeoGram 4002 RIAA board. References are for the left
 ## Signal path
 
 ```
-P8 L IN ─ C101 100p ─┬─ C106 10µ ─► U5A (stage 1: 3180/318 µs) ─► R107/R108/C105 (75 µs) ─► U5B (flat ×3.15) ─ C107 10µ ─► K1 (mute) ─► P9 L OUT
+P8 L IN ─ C101 100p ─┬─ C106 10µ ─► U5A (stage 1: 3180/318 µs) ─► R107/R108/C105 (75 µs) ─► U5B (flat ×4.75) ─ R113 100 ─ C107 10µ ─► K1 (mute) ─► P9 L OUT
                      │              bias: R103 47k from VREF_L                     (DC-coupled)
 ```
 
@@ -41,18 +41,20 @@ C102 is 33 nF, the same WIMA MKS2 part as C105. WIMA's 5 mm film series only com
 
 ### Stage 2 – U5B
 
-- **Gain:** 1 + R109/R110 = 1 + 4.3 k / 2 k ≈ 3.15 (10 dB). C108 (10 µF) makes it unity gain at DC, so the output also sits at ≈ 10 V. DC errors from stage 1 (offset, leakage of C103) pass through at gain 1 and are blocked by C107.
-- **Output:** C107 (10 µF) couples the output to the mute relay and P9.
+- **Gain:** 1 + R109/R110 = 1 + 7.5 k / 2 k ≈ 4.75 (13.5 dB). This stage sets the overall level without touching the RIAA curve, so it is the place to change the gain for another cartridge (v2 had 4.3 k, about 3.5 dB less). C108 (10 µF) makes it unity gain at DC, so the output also sits at ≈ 10 V. DC errors from stage 1 (offset, leakage of C103) pass through at gain 1 and are blocked by C107.
+- **Output resistor:** R113 (100 Ω) sits between the op-amp output and C107, outside the feedback loop: R109 takes its feedback directly from the output pin. The cable to the amplifier (DIN harness and interconnect, roughly 100–300 pF) then loads the op-amp through 100 Ω instead of directly, which keeps the feedback loop stable with any cable. It also limits the current when the mute relay shorts the output (C107 alone is about 16 Ω at 1 kHz). Into a 47 kΩ input it costs 0.02 dB, and with 300 pF of cable it forms a filter around 5 MHz.
+- **Output:** C107 (10 µF ceramic) couples the output to the mute relay and P9. At its 10 V bias it keeps roughly half its value, which with a 47 kΩ amplifier input still puts the corner below 1 Hz.
 
 ### Overall
 
-- **Gain at 1 kHz:** ≈ 35 dB (simulated with a 47 kΩ amplifier input).
-- **Output level:** a typical 5 mV/1 kHz cartridge gives ≈ 275 mV out.
+- **Gain at 1 kHz:** ≈ 38 dB (simulated with a 47 kΩ amplifier input).
+- **Output level:** B&O's MMC cartridges give about 0.6 mV per cm/s, so 2.5–3 mV at 5 cm/s and ≈ 200–250 mV out. A typical 5 mV moving-magnet cartridge gives ≈ 410 mV.
+- **Headroom:** the output can swing about 6 V rms on the 20.8 V supply, more than 20 dB above these levels.
 - **RIAA accuracy (simulated):** within ±0.1 dB from 50 Hz to 20 kHz (chart and table in the README; `scripts/riaa_response.py` regenerates them). The response is 0.6 dB down at 20 Hz because of the coupling capacitors, which also act as a gentle subsonic filter. The component tolerances add to this: C102 and C105 are 5 % parts.
 
 ## Bias reference
 
-Each channel has its own reference: `VREF_L` = R23 / R24 (100 k / 100 k) from `24VDC+`, with C34 (10 µF) to GND. `VREF_R` uses R25, R26 and C35. VREF sits at half the supply (≈ 10.4 V), and the 0.5 s time constant filters out supply ripple and noise.
+Each channel has its own reference: `VREF_L` = R23 / R24 (100 k / 100 k) from `24VDC+`, with C34 (22 µF ceramic, about 10 µF at its 10.4 V bias) to GND. `VREF_R` uses R25, R26 and C35. VREF sits at half the supply (≈ 10.4 V), and the ≈ 0.5 s time constant filters out supply ripple and noise.
 
 This matters because the op-amp + inputs see whatever is on the bias node and amplify it like the signal. Stage 1 has 40–45 dB of gain at 50–100 Hz. Simulated transfer from ripple on `24VDC+` to the output (typical MM cartridge on the input):
 
@@ -71,10 +73,24 @@ With v2, 1 mV of ripple on the supply gave hum about 43 dB below a 5 mV cartridg
   - Vout = 1.25 V · (1 + R19/R20) = 1.25 · (1 + 4700/300) ≈ **20.8 V**
   - Dropout headroom ≈ 9 V. The LM317 needs about 2–3 V at the bottom of the ripple. v2 made 24.6 V, which left only 5.4 V of headroom. On a low or rippled rail the regulator then drops out and passes the ripple through.
 - **Protection:** D5 protects against reverse voltage from output to input. D6 discharges the adjust-pin capacitor C30 (10 µF), which improves ripple rejection.
-- **Bulk capacitance:** C1 (470 µF) at the regulator output. The LM317 is stable without an output capacitor; one electrolytic is plenty for its transient response. It doesn't matter for hum: the regulator's output impedance at 100 Hz is milliohms. v2 had four (C1, C2, C3, C31). The other three only made the LM317 run in current limit for longer at power-on, pulling about 1 A from the turntable's 30 V rail.
+- **Output capacitor:** C1 (10 µF ceramic) at the regulator output. The LM317 is stable without an output capacitor. Unlike a low-dropout regulator it has no minimum-ESR requirement, so a ceramic is fine. The few µF left at 20.8 V are enough for a steady load of about 20 mA with local decoupling at the op-amps. C1 doesn't matter for hum: the regulator's output impedance at 100 Hz is milliohms. v2 had four electrolytics here (C1, C2, C3, C31). They only made the LM317 run in current limit for longer at power-on, pulling about 1 A from the turntable's 30 V rail.
 - **Decoupling:** C27 and C28 (100 nF) sit directly at pin 8 of U5 and U6, each with a ground via. In v2 they were in the power section, about 40 mm of trace away from the op-amps. C29 (100 nF) bypasses the regulator input. (v2 also had C32, 100 nF at the regulator output; C1 and the local decoupling make it unnecessary.)
 - **Load:** about 21–25 mA (op-amps 16–20 mA, R19/R20 4 mA). The LM317 dissipates about 0.25 W.
 - **Single-supply operation:** the op-amp inputs sit at about 10.4 V (`VREF`). The OPA2134 is rated up to 36 V total supply, and 20.8 V leaves far more output swing than the ~0.3 V signal needs.
+
+## Capacitors
+
+Ceramic capacitors can't be fitted the wrong way round, so v3 uses them wherever they work: C1, C34/C35 and C107/C207 were electrolytics in v2. Because of the single supply, almost every capacitor has about 10 V DC across it. X5R/X7R ceramics lose much of their capacitance at that voltage, so the values allow for it: a 10 µF 50 V part keeps roughly half, and C34/C35 are 22 µF to keep about 10 µF.
+
+Six electrolytics remain, where a ceramic would hurt the sound:
+
+| Part | Job | Why it stays electrolytic |
+|---|---|---|
+| C106 / C206 (10 µF) | Input coupling | Ceramics turn vibration into voltage (microphonics). Here that voltage would sit right at the cartridge, in front of up to 45 dB of gain, inside a turntable. A 1 µF film capacitor would be the polarity-free alternative (3.4 Hz corner, through-hole). |
+| C103 / C203 (220 µF) | Stage 1 RIAA feedback | No ceramic comes close to 220 µF at 10 V. The full feedback signal flows through it in the bass-boost region, where a ceramic's voltage-dependent capacitance would add distortion. |
+| C108 / C208 (10 µF) | Stage 2 gain leg (with R110, 2 kΩ) | The corner is already 8 Hz. A ceramic keeping only 4–5 µF at its bias would take the response at 20 Hz from −0.6 dB to about −2 dB (simulated), and it carries signal too. |
+
+Each of them has its + side on the higher DC voltage (VREF, about 10 V, against GND or the 0 V input), and the footprints show the polarity. Check it in the fab's assembly preview.
 
 ## Mute relay
 
@@ -95,6 +111,25 @@ This board has to join the pickup returns to its own ground, because the preampl
 - Currents in the GND plane (keyboard current through P10, relay coil current, the ground connection to the amplifier through P9) therefore no longer appear in series with the cartridge. In v2 the returns joined the plane at P8, about 60 mm from the op-amps. At 50 Hz every 1 µV between the cartridge return and the input stage's ground gives 0.3 mV of hum at the output.
 - P8 pins 3/4 (main-board GND) and 5/6 (cable shields) go to the GND plane, as in the original.
 - P10 passes 30 V, 21 V and GND through to the keyboard, as the original module did.
+
+## BeoGram 4004
+
+B&O made two versions of PCB 8 (service manual, diagram 2 "for Beogram 4002 and 4004"). 8005014 (4002) holds only the mute relay. 8005022 (4004) adds the remote-control circuit for the Beomaster 2400 (8TR1–8TR8, 8IC2) and the P10 connector:
+
+| Original P10 pin | 4004 function | This board |
+|---|---|---|
+| 1 | START output (8TR7) | open |
+| 2 | 30 V (from P8-9) | 30 V |
+| 3, 4 | START / STOP sections of the electronic switch (inputs, block the remote during slide travel) | open |
+| 5 | Arm rise/lower switch (8IC2, open collector) | open |
+| 6 | 21 V (from P8-8), feeds the slide-transport keys | 21 V |
+| 7 | GND | GND |
+| 8 | STOP contact (8TR3, open collector) | open |
+| 9 | Arm-lifted sense | open |
+
+The remote inputs come from the 7-pin DIN socket through P9: DIN 6 to P9-2 (13 V while the Beomaster is on) and DIN 7 to P9-4 (13 V while PHONO is selected, a 34 kHz burst when PHONO is pressed again). The circuit starts the turntable on PHONO, pauses or resumes on the next press, and stops when another source or standby is selected.
+
+This board carries the power pins and leaves the remote pins open. The outputs on those pins are open collector, so leaving them open does nothing to the turntable, and the keys work as normal. P9 pins 2 and 4 are not connected either, so the DIN 6/7 wires of a 4004 harness end there. (Earlier boards had them on ground, which shorts the Beomaster's remote outputs: DIN 6 is driven from 2IC5 through 680 Ω.) P9 uses the original pin layout: 1 = L, 3 = R, 5 = signal ground (DIN 2), 6 = chassis.
 
 ## Hum and ground loops
 

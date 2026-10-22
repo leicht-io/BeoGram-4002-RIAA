@@ -1431,6 +1431,146 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:D_Zener"
 			(pin_numbers
 				(hide yes)
@@ -3277,12 +3417,6 @@
 		(uuid "33a1657e-e81f-430a-b666-82980f81cd65")
 	)
 	(junction
-		(at 398.78 162.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "33d496cf-d727-4a06-94f3-94becbeb6b64")
-	)
-	(junction
 		(at 292.1 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3313,12 +3447,6 @@
 		(uuid "4fdbb535-e75d-49b1-9500-375dae3d4288")
 	)
 	(junction
-		(at 396.24 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "50025c44-078f-4786-a218-d9f6ef8ced13")
-	)
-	(junction
 		(at 167.64 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3335,12 +3463,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "59c1fb15-dcbd-44f4-8f30-54d36c308ac5")
-	)
-	(junction
-		(at 393.7 162.56)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5c99a020-0213-4a11-9c40-1dcd7efadca9")
 	)
 	(junction
 		(at 337.82 82.55)
@@ -3602,7 +3724,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 85.09) (xy 219.71 85.09)
+			(xy 223.52 85.09) (xy 227.33 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3792,16 +3914,6 @@
 	)
 	(wire
 		(pts
-			(xy 393.7 170.18) (xy 396.24 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bf3d7ef-1ace-4733-a8d4-29c40b84b2b6")
-	)
-	(wire
-		(pts
 			(xy 342.9 193.04) (xy 342.9 205.74)
 		)
 		(stroke
@@ -3829,16 +3941,6 @@
 			(type default)
 		)
 		(uuid "22979d07-8c79-4656-b9e0-c52bc4393083")
-	)
-	(wire
-		(pts
-			(xy 393.7 162.56) (xy 393.7 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22c1defc-dd7b-40f0-8a20-e6798f71bd02")
 	)
 	(wire
 		(pts
@@ -3992,7 +4094,7 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 85.09) (xy 406.4 85.09)
+			(xy 406.4 85.09) (xy 414.02 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4352,16 +4454,6 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 162.56) (xy 398.78 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65831631-a2c3-4142-85a9-d20482fcfa09")
-	)
-	(wire
-		(pts
 			(xy 64.77 148.59) (xy 64.77 160.02)
 		)
 		(stroke
@@ -4449,16 +4541,6 @@
 			(type default)
 		)
 		(uuid "6e86e269-d940-4d8f-a3f8-873f15265fdf")
-	)
-	(wire
-		(pts
-			(xy 398.78 170.18) (xy 396.24 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f898da0-647f-4dfa-a3f1-506277f4db45")
 	)
 	(wire
 		(pts
@@ -4802,16 +4884,6 @@
 	)
 	(wire
 		(pts
-			(xy 398.78 149.86) (xy 398.78 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "940ae8d5-b61c-4a4c-8563-67dca2f39ebf")
-	)
-	(wire
-		(pts
 			(xy 346.71 191.77) (xy 347.98 191.77)
 		)
 		(stroke
@@ -4929,16 +5001,6 @@
 			(type default)
 		)
 		(uuid "a14ca280-bd23-4d19-9baf-a8c94feeee75")
-	)
-	(wire
-		(pts
-			(xy 396.24 170.18) (xy 396.24 172.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1c4258b-16e6-4d0f-b021-d8bcb5e269c1")
 	)
 	(wire
 		(pts
@@ -5409,16 +5471,6 @@
 			(type default)
 		)
 		(uuid "cb160155-712d-45a4-b9df-3e80c0775586")
-	)
-	(wire
-		(pts
-			(xy 393.7 149.86) (xy 393.7 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc6456b0-ebae-41a3-b7b3-86bd9fe90ff8")
 	)
 	(wire
 		(pts
@@ -6160,7 +6212,7 @@
 	)
 	(global_label "R OUT RIAA"
 		(shape input)
-		(at 406.4 85.09 0)
+		(at 414.02 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6170,7 +6222,7 @@
 		)
 		(uuid "3ca71ea3-8c1e-4531-a558-a75c85872a15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 420.271 85.09 0)
+			(at 427.891 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6290,28 +6342,6 @@
 			)
 		)
 	)
-	(global_label "GND L OUT"
-		(shape input)
-		(at 393.7 149.86 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7afa3f15-9b2d-4afd-ab77-2c291832c127")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 393.7 136.4124 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape input)
 		(at 270.51 196.85 270)
@@ -6358,7 +6388,7 @@
 	)
 	(global_label "L OUT RIAA"
 		(shape input)
-		(at 219.71 85.09 0)
+		(at 227.33 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6368,7 +6398,7 @@
 		)
 		(uuid "81fcf450-7530-4a3e-8472-c78741109121")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 233.3391 85.09 0)
+			(at 240.9591 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6484,28 +6514,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND R OUT"
-		(shape input)
-		(at 398.78 149.86 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9e92b6f0-8402-43f0-82d9-14a01da7e520")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 398.78 136.1705 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6837,6 +6845,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "OMRON"
+			(at 270.51 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "G6K-2F-Y-TR DC24"
+			(at 270.51 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "caaaa0ac-f18a-422f-bf2b-ee1b3d4ced1d")
 		)
@@ -6932,6 +6958,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 372.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD072KL"
+			(at 372.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "962627d6-9f92-4a39-9c7e-fd8bc5c2a138")
 		)
@@ -7005,6 +7049,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 124.46 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD0710KL"
+			(at 124.46 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7081,6 +7143,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Shikues"
+			(at 243.84 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4004G"
+			(at 243.84 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7227,6 +7307,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "JARSON"
+			(at 372.11 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FZ1V100M0506"
+			(at 372.11 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f802d3f8-e474-4c39-b211-bf0a4dbfd107")
 		)
@@ -7305,6 +7403,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 77.47 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F4701T5E"
+			(at 77.47 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d76fad88-373a-418a-93fd-f3a7ab3d51b5")
 		)
@@ -7337,7 +7453,7 @@
 				)
 			)
 		)
-		(property "Value" "LM317_TO-220"
+		(property "Value" "LM317"
 			(at 77.47 156.21 0)
 			(effects
 				(font
@@ -7379,6 +7495,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 77.47 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "LM317D2TR4G"
+			(at 77.47 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "3"
@@ -7459,6 +7593,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 140.97 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD072K37L"
+			(at 140.97 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "64846edb-f4fa-4d38-971f-3e6ce93ee6a0")
 		)
@@ -7533,6 +7685,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "JARSON"
+			(at 87.63 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FZ1V100M0506"
+			(at 87.63 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7611,6 +7781,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 303.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "OPA2134UA/2K5"
+			(at 303.53 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "ed684298-0784-4ad8-a2c4-b72961badda4")
 		)
@@ -7680,7 +7868,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/WIMA/MKS2C023301A00JC00?qs=sJjjjplDs9sKt3n1kQYvZA%3D%3D"
+		(property "Datasheet" "~"
 			(at 167.64 88.9 0)
 			(effects
 				(font
@@ -7698,12 +7886,22 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "WIMA MKS2"
-			(at 167.64 88.9 90)
+		(property "Manufacturer" "WIMA"
+			(at 167.64 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MKS2C023301A00JSSD"
+			(at 167.64 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -7782,6 +7980,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 93.98 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD07300RL"
+			(at 93.98 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -7901,7 +8117,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/WIMA/FKP2C001001D00HN00?qs=WI052HLiD5hqsCUy38Lkcw%3D%3D"
+		(property "Datasheet" "~"
 			(at 262.89 86.36 0)
 			(effects
 				(font
@@ -7919,12 +8135,22 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "WIMA FKP2"
-			(at 262.89 86.36 90)
+		(property "Manufacturer" "WIMA"
+			(at 262.89 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FKP2D001001D00JSSD"
+			(at 262.89 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -8004,6 +8230,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 25.4 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31B104KBCNNNC"
+			(at 25.4 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "263a30cc-c87e-4734-9ef2-eccab6f5cbc4")
 		)
@@ -8077,6 +8321,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 298.45 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC1206FR-0795K3L"
+			(at 298.45 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -8155,6 +8417,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 243.84 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1001T5E"
+			(at 243.84 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2492ccf9-e894-4d2b-947e-2bf18ed90ded")
 		)
@@ -8230,6 +8510,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 243.84 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1003T5E"
+			(at 243.84 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f8ff8691-9809-4c17-9f30-1853ba3601f8")
 		)
@@ -8240,72 +8538,6 @@
 			(project "RIAA"
 				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
 					(reference "R22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 396.24 172.72 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45d74cd8-1d7d-4411-a055-eed95d46227c")
-		(property "Reference" "#PWR021"
-			(at 396.24 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 396.24 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 396.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 396.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 396.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2dcc1cf8-5c45-4b1e-bd35-96564388feed")
-		)
-		(instances
-			(project "RIAA"
-				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -8372,6 +8604,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 40.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "OPA2134UA/2K5"
+			(at 40.64 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "8"
@@ -8536,6 +8786,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 24.13 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "OPA2134UA/2K5"
+			(at 24.13 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "8"
 			(uuid "ed684298-0784-4ad8-a2c4-b72961badda3")
 		)
@@ -8628,6 +8896,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 383.54 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "OPA2134UA/2K5"
+			(at 383.54 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "8"
@@ -8792,6 +9078,24 @@
 				(justify left)
 			)
 		)
+		(property "Manufacturer" "HCTL"
+			(at 353.06 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PM254-2-09-W-8.5"
+			(at 353.06 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "14"
 			(uuid "11025e54-5cd6-47e0-8402-56c4084421ea")
 		)
@@ -8917,6 +9221,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KNSCHA"
+			(at 292.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "189RV0019"
+			(at 292.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8692d5b9-cab2-4310-a06a-856ddb487582")
 		)
@@ -8968,7 +9290,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/WIMA/FKP2C001001D00HN00?qs=WI052HLiD5hqsCUy38Lkcw%3D%3D"
+		(property "Datasheet" "~"
 			(at 80.01 86.36 0)
 			(effects
 				(font
@@ -8986,12 +9308,22 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "WIMA FKP2"
-			(at 80.01 86.36 90)
+		(property "Manufacturer" "WIMA"
+			(at 80.01 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FKP2D001001D00JSSD"
+			(at 80.01 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9135,6 +9467,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "BOOMELE"
+			(at 396.24 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "2.54-1*6P"
+			(at 396.24 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "e5ba5045-8f29-49a7-ba9e-c7a4fb778f02")
 		)
@@ -9223,6 +9573,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Shikues"
+			(at 104.14 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4002G"
+			(at 104.14 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "026b7388-e5ef-4162-b637-32b3f79100be")
 		)
@@ -9298,6 +9666,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 190.5 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD072KL"
+			(at 190.5 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9417,7 +9803,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/WIMA/MKS2C023301A00JC00?qs=sJjjjplDs9sKt3n1kQYvZA%3D%3D"
+		(property "Datasheet" "~"
 			(at 350.52 88.9 0)
 			(effects
 				(font
@@ -9435,12 +9821,22 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "WIMA MKS2"
-			(at 350.52 88.9 90)
+		(property "Manufacturer" "WIMA"
+			(at 350.52 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MKS2C023301A00JSSD"
+			(at 350.52 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -9649,6 +10045,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 110.49 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC1206FR-0795K3L"
+			(at 110.49 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7c193fb3-1fb5-42f9-84c6-76dc46bf35d5")
 		)
@@ -9665,8 +10079,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
-		(at 396.24 85.09 90)
+		(lib_id "Device:C_Small")
+		(at 403.86 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9674,7 +10088,7 @@
 		(dnp no)
 		(uuid "7c8d92d9-4bd3-47e6-a345-76f704f2328d")
 		(property "Reference" "C207"
-			(at 396.24 79.248 90)
+			(at 403.86 79.248 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9682,15 +10096,15 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 396.24 81.788 90)
+			(at 403.86 81.788 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
-			(at 396.24 85.09 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9698,8 +10112,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 396.24 85.09 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9707,8 +10121,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
-			(at 396.24 85.09 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 403.86 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9716,12 +10130,30 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
-			(at 396.24 85.09 90)
+		(property "LCSC PN" "C13585"
+			(at 403.86 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 403.86 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 403.86 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9800,6 +10232,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "RESI"
+			(at 281.94 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PTFR1206B47K0P9"
+			(at 281.94 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -9945,6 +10395,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 154.94 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC1206FR-0754K9L"
+			(at 154.94 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "efacc2a1-0fec-4e57-81dd-97c9b99e7de3")
 		)
@@ -9961,7 +10429,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 64.77 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10006,7 +10474,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 64.77 170.18 0)
 			(effects
 				(font
@@ -10021,6 +10489,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31B104KBCNNNC"
+			(at 64.77 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10039,7 +10525,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 93.98 175.26 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10084,7 +10570,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 93.98 175.26 0)
 			(effects
 				(font
@@ -10099,6 +10585,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10178,6 +10682,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 104.14 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD07590RL"
+			(at 104.14 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ba85b651-d37c-48f2-813f-fadd73b2bad2")
 		)
@@ -10210,7 +10732,7 @@
 				)
 			)
 		)
-		(property "Value" "4.3k"
+		(property "Value" "7.5k"
 			(at 200.66 92.964 90)
 			(effects
 				(font
@@ -10245,12 +10767,30 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C870770"
+		(property "LCSC PN" "C351451"
 			(at 200.66 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "RESI"
+			(at 200.66 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PTFR1206B7K50P9"
+			(at 200.66 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10269,7 +10809,193 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:R")
+		(at 397.51 85.09 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6c1cef61-843b-4e0d-ad59-9d29ebe47863")
+		(property "Reference" "R213"
+			(at 397.51 80.772 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 397.51 82.804 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 397.51 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17901"
+			(at 397.51 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1000T5E"
+			(at 397.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "823906ee-f936-4489-a565-196a88398100")
+		)
+		(pin "1"
+			(uuid "8f36c5b7-f248-4938-9b41-daedbf364150")
+		)
+		(instances
+			(project "RIAA"
+				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
+					(reference "R213")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 214.63 85.09 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9e2c3cb-5ec7-4108-85ff-0d270ccd53d3")
+		(property "Reference" "R113"
+			(at 214.63 80.772 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100"
+			(at 214.63 82.804 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 214.63 83.312 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC PN" "C17901"
+			(at 214.63 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1000T5E"
+			(at 214.63 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1b3a3483-6d3e-4d2b-ae1b-81f8d33d90f3")
+		)
+		(pin "1"
+			(uuid "68206b4a-fe72-437f-9e0a-5922219823fe")
+		)
+		(instances
+			(project "RIAA"
+				(path "/d42afdab-200b-47bd-9783-ae2fad19e73b"
+					(reference "R113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 124.46 171.45 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10286,7 +11012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470uF"
+		(property "Value" "10uF"
 			(at 121.666 173.99 0)
 			(effects
 				(font
@@ -10295,7 +11021,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10304,7 +11030,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://jlcpcb.com/partdetail/Lelon-VZH471M1VTR1013/C134838"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10313,7 +11039,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 124.46 171.45 0)
 			(effects
 				(font
@@ -10322,12 +11048,30 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C134524"
+		(property "LCSC PN" "C13585"
 			(at 124.46 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 124.46 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 124.46 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10404,6 +11148,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "JARSON"
+			(at 274.32 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FZ1V100M0506"
+			(at 274.32 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10483,6 +11245,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 337.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC1206FR-0754K9L"
+			(at 337.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4bd85dc7-b333-4d4a-a346-845b15afa1b9")
 		)
@@ -10556,6 +11336,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Shikues"
+			(at 78.74 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4004G"
+			(at 78.74 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10634,6 +11432,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Shikues"
+			(at 220.98 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1N4004G"
+			(at 220.98 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -10844,6 +11660,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 312.42 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD0710KL"
+			(at 312.42 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6a295539-6822-4f6e-99bd-b2e5923c7029")
 		)
@@ -10918,6 +11752,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 115.57 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "OPA2134UA/2K5"
+			(at 115.57 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "8"
@@ -11016,6 +11868,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "JARSON"
+			(at 190.5 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "FZ1V100M0506"
+			(at 190.5 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8d16fdd1-3354-4824-8aaa-0526da4cffef")
 		)
@@ -11032,8 +11902,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
-		(at 213.36 85.09 90)
+		(lib_id "Device:C_Small")
+		(at 220.98 85.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11041,7 +11911,7 @@
 		(dnp no)
 		(uuid "b0b8ad5c-d9ef-4a98-98da-fbda73157239")
 		(property "Reference" "C107"
-			(at 213.36 79.248 90)
+			(at 220.98 79.248 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11049,15 +11919,15 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 213.36 81.788 90)
+			(at 220.98 81.788 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
-			(at 213.36 85.09 0)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11065,8 +11935,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 213.36 85.09 0)
+		(property "Datasheet" "https://jlcpcb.com/partdetail/14236-CL31A106KBHNNNE/C13585"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11074,8 +11944,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
-			(at 213.36 85.09 0)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 220.98 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11083,12 +11953,30 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
-			(at 213.36 85.09 90)
+		(property "LCSC PN" "C13585"
+			(at 220.98 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 220.98 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A106KBHNNNE"
+			(at 220.98 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11168,6 +12056,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 41.91 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31B104KBCNNNC"
+			(at 41.91 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cf00dc0f-c888-431e-a440-b8e0ab9a5549")
 		)
@@ -11242,6 +12148,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 201.93 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "OPA2134UA/2K5"
+			(at 201.93 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "8"
@@ -11356,6 +12280,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 224.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "BCV49TA"
+			(at 224.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "126d2da3-ea3e-4b32-8c47-4148905414e6")
 		)
@@ -11437,6 +12379,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "HCTL"
+			(at 372.11 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PM254-2-09-W-8.5"
+			(at 372.11 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "18"
 			(uuid "b0e3d06c-81ce-424f-ad21-a4339c4836e3")
 		)
@@ -11501,7 +12461,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 256.54 138.43 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11544,7 +12504,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 256.54 138.43 0)
 			(effects
 				(font
@@ -11559,6 +12519,24 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "Chinocera"
+			(at 256.54 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "HGC1206R5107M100NSPJ"
+			(at 256.54 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -11701,6 +12679,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 327.66 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD072K37L"
+			(at 327.66 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "32e7b8c4-6b6b-495d-b440-43cee5476f22")
 		)
@@ -11779,6 +12775,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "RESI"
+			(at 93.98 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PTFR1206B47K0P9"
+			(at 93.98 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6487ebed-af2a-4e28-9e83-17f3b3827366")
 		)
@@ -11855,6 +12869,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Bourns"
+			(at 262.89 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "3314G-1-105E"
+			(at 262.89 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "9503e560-bfb5-4f4d-b69d-ab97f606ffc3")
 		)
@@ -11909,7 +12941,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/WIMA/MKS2C023301A00JC00?qs=sJjjjplDs9sKt3n1kQYvZA%3D%3D"
+		(property "Datasheet" "~"
 			(at 110.49 97.79 0)
 			(effects
 				(font
@@ -11927,12 +12959,22 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "WIMA MKS2"
-			(at 110.49 97.79 90)
+		(property "Manufacturer" "WIMA"
+			(at 110.49 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MKS2C023301A00JSSD"
+			(at 110.49 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -11967,7 +13009,7 @@
 				)
 			)
 		)
-		(property "Value" "4.3k"
+		(property "Value" "7.5k"
 			(at 382.27 92.964 90)
 			(effects
 				(font
@@ -12002,12 +13044,30 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C870770"
+		(property "LCSC PN" "C351451"
 			(at 382.27 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "Manufacturer" "RESI"
+			(at 382.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "PTFR1206B7K50P9"
+			(at 382.27 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12087,6 +13147,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 292.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RT1206BRD07590RL"
+			(at 292.1 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "feabfaa3-5b9c-464d-b0ac-91f9cd44c5ef")
 		)
@@ -12164,6 +13242,24 @@
 				)
 			)
 		)
+		(property "Manufacturer" "KNSCHA"
+			(at 104.14 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "189RV0019"
+			(at 104.14 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "59a65c52-3159-428e-ac64-0017a03a4090")
 		)
@@ -12215,7 +13311,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/WIMA/MKS2C023301A00JC00?qs=sJjjjplDs9sKt3n1kQYvZA%3D%3D"
+		(property "Datasheet" "~"
 			(at 298.45 97.79 0)
 			(effects
 				(font
@@ -12233,12 +13329,22 @@
 				(hide yes)
 			)
 		)
-		(property "PN" "WIMA MKS2"
-			(at 298.45 97.79 90)
+		(property "Manufacturer" "WIMA"
+			(at 298.45 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "MKS2C023301A00JSSD"
+			(at 298.45 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "1"
@@ -12350,6 +13456,24 @@
 				(justify left)
 			)
 		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 27.94 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1003T5E"
+			(at 27.94 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7b01716d-a297-4cad-991b-eb54bf9d498e")
 		)
@@ -12442,6 +13566,24 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 27.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1003T5E"
+			(at 27.94 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12562,7 +13704,7 @@
 		(uuid "96b88dc0-5ce3-42b6-b128-01be208b20cc")
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 40.64 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12579,7 +13721,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 43.18 41.91 0)
 			(effects
 				(font
@@ -12588,7 +13730,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -12597,7 +13739,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/C12891"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -12606,7 +13748,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 40.64 40.64 0)
 			(effects
 				(font
@@ -12615,13 +13757,31 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
+		(property "LCSC PN" "C12891"
 			(at 43.18 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 40.64 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A226KAHNNNE"
+			(at 40.64 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -12840,6 +14000,24 @@
 				(justify left)
 			)
 		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 72.39 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1003T5E"
+			(at 72.39 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "177478bf-99a7-44c5-b1c0-6cf667ebc430")
 		)
@@ -12932,6 +14110,24 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" "UNI-ROYAL"
+			(at 72.39 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "1206W4F1003T5E"
+			(at 72.39 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13052,7 +14248,7 @@
 		(uuid "1a2f70ce-c12d-463d-b2ea-752cdf47c036")
 	)
 	(symbol
-		(lib_id "Device:C_Polarized_Small")
+		(lib_id "Device:C_Small")
 		(at 85.09 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13069,7 +14265,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 87.63 41.91 0)
 			(effects
 				(font
@@ -13078,7 +14274,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -13087,7 +14283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://jlcpcb.com/partdetail/C12891"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -13096,7 +14292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Polarized capacitor, small symbol"
+		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 85.09 40.64 0)
 			(effects
 				(font
@@ -13105,13 +14301,31 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC PN" "C5260729"
+		(property "LCSC PN" "C12891"
 			(at 87.63 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 85.09 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CL31A226KAHNNNE"
+			(at 85.09 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13669,6 +14883,14 @@
 			(justify left top)
 		)
 		(uuid "4627ded4-c4ce-41fd-b334-ee17a5f558b0")
+	)
+	(no_connect
+		(at 393.7 162.56)
+		(uuid "e2230fef-b6f3-4a67-bd1a-73c298cee866")
+	)
+	(no_connect
+		(at 398.78 162.56)
+		(uuid "e6fc44f4-ca41-4b74-b71c-5d32f9a1fd0a")
 	)
 	(no_connect
 		(at 266.7 158.75)

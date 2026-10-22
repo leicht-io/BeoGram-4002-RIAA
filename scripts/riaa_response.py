@@ -90,19 +90,25 @@ def stage1(c, C102, R105, R106, R104, C103):
     c.R("N1", "X1", R104); c.C("X1", "0", C103)
 
 
-def stage2(c, plus):
+def stage2(c, plus, C107, R109, R113=None):
     c.opamp(plus, "N2", "O2")
-    c.R("O2", "N2", 4.3e3); c.R("N2", "Y2", 2e3); c.C("Y2", "0", 10e-6)   # R109, R110, C108
-    c.C("O2", "OUT", 10e-6); c.R("OUT", "0", 47e3)                          # C107, amplifier input
+    c.R("O2", "N2", R109); c.R("N2", "Y2", 2e3); c.C("Y2", "0", 10e-6)    # R109, R110, C108
+    if R113:
+        c.R("O2", "Q2", R113); c.C("Q2", "OUT", C107)                       # R113, C107
+    else:
+        c.C("O2", "OUT", C107)                                              # C107
+    c.R("OUT", "0", 47e3)                                                   # amplifier input
 
 
 def v3():
+    # C34 and C107 are ceramics with ~10 V DC across them, so they are modelled with the
+    # capacitance left at that bias (assumed): 22 uF -> 10 uF, 10 uF -> 4.7 uF.
     c = Circuit()
-    c.R("REF", "0", 50e3); c.C("REF", "0", 10e-6)          # VREF: 100k || 100k with 10 uF
+    c.R("REF", "0", 50e3); c.C("REF", "0", 10e-6)          # VREF: 100k || 100k with C34
     stage1(c, 33e-9, 95.3e3, 10e3, 590, 220e-6)
     c.R("REF", "P1", 47e3)                                  # R103
     c.R("O1", "A1", 2.37e3); c.R("A1", "0", 54.9e3); c.C("A1", "0", 33e-9)   # R107, R108, C105
-    stage2(c, "A1")                                         # DC-coupled
+    stage2(c, "A1", 4.7e-6, 7.5e3, 100)                     # DC-coupled
     return c
 
 
@@ -112,7 +118,7 @@ def v2():
     c.R("P1", "0", 23.5e3)                                  # R102 || R103
     c.R("O1", "A1", 2.37e3); c.R("A1", "0", 54.9e3)
     c.C("A1", "P2", 2e-6); c.C("P2", "0", 33e-9); c.R("P2", "0", 23.5e3)    # C104, C105, R111 || R112
-    stage2(c, "P2")
+    stage2(c, "P2", 10e-6, 4.3e3)
     return c
 
 

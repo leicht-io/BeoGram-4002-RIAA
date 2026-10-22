@@ -104,4 +104,5 @@ jobs:
             --title "$GITHUB_REF_NAME" --generate-notes --draft \
             out/RIAA-gerbers.zip out/RIAA-schematic.pdf \
             out/RIAA-bom-full.csv out/RIAA-bom-jlcpcb.csv out/RIAA-cpl-jlcpcb.csv \
+            out/RIAA-bom-pcbway.csv out/RIAA-cpl-pcbway.csv \
             out/RIAA-top.png out/RIAA-bottom.png
