@@ -1571,7 +1571,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Zener"
+		(symbol "Device:D"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1590,7 +1590,7 @@
 					)
 				)
 			)
-			(property "Value" "D_Zener"
+			(property "Value" "D"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -1607,7 +1607,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1616,7 +1616,25 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Zener diode"
+			(property "Description" "Diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1643,10 +1661,22 @@
 					(hide yes)
 				)
 			)
-			(symbol "D_Zener_0_1"
+			(symbol "D_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -1668,20 +1698,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 			)
-			(symbol "D_Zener_1_1"
+			(symbol "D_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -1878,7 +1896,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1888,6 +1906,33 @@
 				)
 			)
 			(property "Description" "Potentiometer"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "R"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" "POT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=r0 2=wiper 3=r1"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1971,24 +2016,6 @@
 					)
 				)
 				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at 3.81 0 180)
 					(length 1.27)
 					(name "2"
@@ -1999,6 +2026,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6012,7 +6057,7 @@
 			)
 		)
 	)
-	(global_label "GND MB"
+	(global_label "GND"
 		(shape input)
 		(at 213.36 151.13 270)
 		(fields_autoplaced yes)
@@ -6166,7 +6211,7 @@
 			)
 		)
 	)
-	(global_label "R OUT RIAA"
+	(global_label "R OUT"
 		(shape input)
 		(at 266.7 173.99 90)
 		(fields_autoplaced yes)
@@ -6210,7 +6255,7 @@
 			)
 		)
 	)
-	(global_label "R OUT RIAA"
+	(global_label "R OUT"
 		(shape input)
 		(at 414.02 85.09 0)
 		(fields_autoplaced yes)
@@ -6254,7 +6299,7 @@
 			)
 		)
 	)
-	(global_label "GND MB"
+	(global_label "GND"
 		(shape input)
 		(at 346.71 190.5 90)
 		(fields_autoplaced yes)
@@ -6276,7 +6321,7 @@
 			)
 		)
 	)
-	(global_label "L OUT RIAA"
+	(global_label "L OUT"
 		(shape input)
 		(at 276.86 173.99 90)
 		(fields_autoplaced yes)
@@ -6386,7 +6431,7 @@
 			)
 		)
 	)
-	(global_label "L OUT RIAA"
+	(global_label "L OUT"
 		(shape input)
 		(at 227.33 85.09 0)
 		(fields_autoplaced yes)
@@ -6496,7 +6541,7 @@
 			)
 		)
 	)
-	(global_label "GND MB"
+	(global_label "GND"
 		(shape input)
 		(at 58.42 180.34 180)
 		(fields_autoplaced yes)
@@ -6540,7 +6585,7 @@
 			)
 		)
 	)
-	(global_label "GND CHASSIS"
+	(global_label "GND"
 		(shape input)
 		(at 243.84 128.27 0)
 		(fields_autoplaced yes)
@@ -6606,7 +6651,7 @@
 			)
 		)
 	)
-	(global_label "GND CHASSIS"
+	(global_label "GND"
 		(shape input)
 		(at 403.86 149.86 90)
 		(fields_autoplaced yes)
@@ -6800,7 +6845,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "G6K-2"
+		(property "Value" "G6K-2F-Y DC24"
 			(at 286.258 186.69 0)
 			(effects
 				(font
@@ -7085,7 +7130,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener")
+		(lib_id "Device:D")
 		(at 243.84 149.86 0)
 		(mirror x)
 		(unit 1)
@@ -7128,7 +7173,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "Diode"
 			(at 243.84 149.86 0)
 			(effects
 				(font
@@ -9513,7 +9558,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener")
+		(lib_id "Device:D")
 		(at 104.14 165.1 90)
 		(mirror x)
 		(unit 1)
@@ -9556,7 +9601,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "Diode"
 			(at 104.14 165.1 0)
 			(effects
 				(font
@@ -11279,7 +11324,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener")
+		(lib_id "Device:D")
 		(at 78.74 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11321,7 +11366,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "Diode"
 			(at 78.74 148.59 0)
 			(effects
 				(font
@@ -11372,7 +11417,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Zener")
+		(lib_id "Device:D")
 		(at 220.98 176.53 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -11417,7 +11462,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode"
+		(property "Description" "Diode"
 			(at 220.98 176.53 0)
 			(effects
 				(font
